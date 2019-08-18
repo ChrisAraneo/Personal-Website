@@ -14,6 +14,7 @@
         type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Mono&subset=latin,latin-ext' rel='stylesheet'
         type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet" type="text/css">
 </head>
@@ -60,7 +61,7 @@
                                 <header class="skill-header">
                                     <h4>Arkusze stylów</h4>
                                 </header>
-                                <div class="skill">CSS3</div>
+                                <div class="skill">CSS 3</div>
                                 <div class="skill">SCSS</div>
                                 <div class="skill">Bootstrap 4</div>
                             </div>
@@ -78,6 +79,13 @@
                                 <div class="skill">React</div>
                                 <div class="skill">React Native</div>
                                 <div class="skill">Android SDK</div>
+                            </div>
+                            <div class="skill-row">
+                                <header class="skill-header">
+                                    <h4>Narzędzia</h4>
+                                </header>
+                                <div class="skill">Git</div>
+                                <div class="skill">Android Studio</div>
                             </div>
                         </div>
                     </div>
@@ -101,75 +109,102 @@
                         </header>
                         <div class="panel-body">
                             <div id="portfolio-preview">
-                                <div id="eurostall" class="portfolio-page">
-                                    <header class="portfolio-page-header">
+
+                                <!-- EUROSTALL PL -->
+                                <div id="eurostall" class="project">
+                                    <header class="project-header">
                                         <h3 class="animation-down">Eurostall.pl</h3>
                                     </header>
-
-                                    <div class="portfolio-page-body">
-                                        <img class="portfolio-page-image" src="img/eurostall.jpg"
-                                            alt="Zrzut ekranu strony internetowej firmy wykonującej konstrukcje stalowe">
-                                        <div class="portfolio-page-text">
-                                            <p>Responsywna strona internetowa firmy oferującej projektowanie i
-                                                realizację
-                                                konstrukcji
-                                                stalowych. Wykonana w 2018 roku w ramach praktyk studenckich.
-                                                Zaktualizowana
-                                                w
-                                                2019 roku.</p>
-                                            <p>Jednym z wyzwań było napisanie arkuszy stylów oraz skryptów
-                                                samodzielnie, bez użycia
-                                                dodatkowych bibliotek.</p>
-                                            <p>Wykorzystane narzędzia: <span class="skill">HTML5</span><span
-                                                    class="skill">SCSS</span><span class="skill">JavaScript E6</span>
-                                            </p>
-                                            <button>Przejdź do strony</button>
-                                        </div>
+                                    <div class="project-description">
+                                        <p>Responsywna strona internetowa firmy oferującej projektowanie i
+                                            realizację
+                                            konstrukcji
+                                            stalowych. Wykonana w 2018 roku w ramach praktyk studenckich.
+                                            Zaktualizowana
+                                            w
+                                            2019 roku.</p>
+                                        <p>Jednym z wyzwań było napisanie arkuszy stylów oraz skryptów
+                                            samodzielnie, bez użycia
+                                            dodatkowych bibliotek.</p>
                                     </div>
+                                    <footer class="project-footer">
+                                        <div class="project-tools">
+                                            <div class="skill-row">
+                                                <header class="skill-header">
+                                                    <h4>Wykorzystane narzędzia</h4>
+                                                </header>
+                                                <div class="skill">HTML 5</div>
+                                                <div class="skill">SCSS</div>
+                                                <div class="skill">JavaScript ES6</div>
+                                            </div>
+                                        </div>
+                                        <div class="project-links">
+                                            <div class="link-row">
+                                                <a class="link" href="https://www.eurostall.pl/" target="_blank"><i
+                                                        class="fa fa-link"></i>Zobacz stronę</a>
+                                            </div>
+                                        </div>
+                                    </footer>
                                 </div>
 
-                                <div class="portfolio-page">
-                                    <header class="portfolio-page-header higher">
+                                <!-- APLIKACJA MOBILNA DO DETEKCJI WYSOKOŚCI NUT -->
+                                <div id="eurostall" class="project">
+                                    <header class="project-header">
                                         <h3 class="animation-down">Aplikacja mobilna do detekcji wysokości nut</h3>
                                     </header>
-
-                                    <div class="portfolio-page-body">
-                                        <img class="portfolio-page-image" src="img/notes.jpg"
-                                            alt="Zrzut ekranu aplikacji mobilnej do detekcji wysokości nut">
-                                        <div class="portfolio-page-text">
-                                            <p>Aplikacja mobilna na system Android z zaimplementowanymi algorytmami
-                                                przetwarzania sygnałów, które są wykorzystane do określenia wysokości
-                                                nut
-                                                nagranego dźwięku. Zrealizowana w ramach pracy inżynierskiej.</p>
-                                            <p>Wykorzystane narzędzia: <span class="skill">Java</span><span
-                                                    class="skill">Android SDK</span>
-                                            </p>
-                                            <button>Github</button>
-                                        </div>
+                                    <div class="project-description">
+                                        <p>Aplikacja mobilna na system Android z zaimplementowanymi algorytmami
+                                            przetwarzania sygnałów, które są wykorzystane do określenia wysokości nut
+                                            nagranego dźwięku. Zrealizowana w ramach pracy inżynierskiej.</p>
                                     </div>
-
+                                    <footer class="project-footer">
+                                        <div class="project-tools">
+                                            <div class="skill-row">
+                                                <header class="skill-header">
+                                                    <h4>Wykorzystane narzędzia</h4>
+                                                </header>
+                                                <div class="skill">Java</div>
+                                                <div class="skill">Android SDK</div>
+                                                <div class="skill">Android Studio</div>
+                                                <div class="skill">Git</div>
+                                            </div>
+                                        </div>
+                                        <div class="project-links">
+                                            <div class="link-row">
+                                                <a class="link" href="index.html" target="_blank"><i
+                                                        class="fa fa-github"></i>Projekt</a>
+                                            </div>
+                                        </div>
+                                    </footer>
                                 </div>
 
-                                <div class="portfolio-page">
-                                    <header class="portfolio-page-header">
+                                <!-- MOJE PORTFOLIO -->
+                                <div id="eurostall" class="project">
+                                    <header class="project-header">
                                         <h3 class="animation-down">Moje portfolio</h3>
                                     </header>
-
-                                    <div class="portfolio-page-body">
-                                        <img class="portfolio-page-image" src="img/portfolio.jpg"
-                                            alt="Zrzut ekranu strony z portfolio">
-                                        <div class="portfolio-page-text">
-                                            <p>Niewielka strona internetowa, na której aktualnie się znajdujesz,
-                                                zawierająca
-                                                portfolio
-                                                z najistotniejszymi projektami.</p>
-                                            <p>Wykorzystane narzędzia: <span class="skill">HTML5</span><span
-                                                    class="skill">CSS</span><span class="skill">JavaScript E6</span>
-                                            </p>
-                                            <button>Github</button>
-                                        </div>
-
+                                    <div class="project-description">
+                                        <p>Strona na której aktualnie się znajdujesz. Znajduje się tutaj spis
+                                            najistotniejszych projektów.</p>
                                     </div>
+                                    <footer class="project-footer">
+                                        <div class="project-tools">
+                                            <div class="skill-row">
+                                                <header class="skill-header">
+                                                    <h4>Wykorzystane narzędzia</h4>
+                                                </header>
+                                                <div class="skill">HTML 5</div>
+                                                <div class="skill">CSS 3</div>
+                                                <div class="skill">Git</div>
+                                            </div>
+                                        </div>
+                                        <div class="project-links">
+                                            <div class="link-row">
+                                                <a class="link" href="index.html" target="_blank"><i
+                                                        class="fa fa-github"></i>Projekt</a>
+                                            </div>
+                                        </div>
+                                    </footer>
                                 </div>
 
                             </div>
