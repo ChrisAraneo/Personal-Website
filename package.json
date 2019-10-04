@@ -1,24 +1,25 @@
 {
   "name": "personal-website",
   "version": "1.0.0",
-  "description": "[My personal website containing portfolio](http://www.chrisaraneo.com/)",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "My personal website containing portfolio",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ChrisAraneo/personal-website.git"
   },
   "author": "Krzysztof Pająk (Chris Araneo)",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ChrisAraneo/personal-website/issues"
-  },
-  "homepage": "https://github.com/ChrisAraneo/personal-website#readme",
+  "homepage": "https://chrisaraneo.com/",
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "grunt": "^1.0.4",
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-htmlmin": "^3.1.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-processhtml": "^0.4.2",
+    "grunt-uncss": "^0.9.0"
   }
 }
