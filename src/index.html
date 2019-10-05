@@ -8,23 +8,13 @@
     <title>Krzysztof Pająk - Portfolio | Chris Araneo</title>
     <!-- build:css css/index.min.css -->
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/navigation.css">
     <!-- endbuild -->
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- NAWIGACJA -->
-    <nav class="navigation">
-        <button aria-expanded="false" aria-controls="menu">Menu</button>
-        <ul id="menu">
-            <li><a href="/">Home</a></li>
-            <li><a href="/benefits">Benefits</a></li>
-            <li><a href="/pricing">Pricing</a></li>
-            <li><a href="/blog">Blog</a></li>
-        </ul>
-    </nav>
-
     <div id="first-page" class="page">
         <div class="container">
             <div class="row">
@@ -90,7 +80,7 @@
         <div class="container">
             <div class="row">
                 <section class="section col-6">
-                    <img />
+
                 </section>
                 <section class="section col-6 portfolio-card">
                     <header class="portfolio-header">
@@ -200,11 +190,10 @@
             </div>
         </div>
     </div>
-    <div id="fifth-page" class="page">
+    <div id="sixth-page" class="page">
         <div class="container">
             <div class="row">
-                <div class="col-6"></div>
-                <section class="section col-6">
+                <section class="section">
                     <header>
                         <h2>Kontakt</h2>
                     </header>
@@ -213,6 +202,14 @@
             </div>
         </div>
     </div>
+
+    <!-- NAWIGACJA -->
+    <nav class="navigation">
+        <a data-href="1">O mnie</a>
+        <a class="active" data-href="2">Portfolio</a>
+        <a data-href="6">Kontakt</a>
+    </nav>
+
 </body>
 
 <!--build:js js/main.min.js -->

@@ -1,3 +1,5 @@
+/* COLOR PALLETE */
+/* TEXT COLORS */
 * {
   padding: 0;
   margin: 0; }
@@ -6,7 +8,9 @@ body {
   min-height: 150vh;
   font-size: 1.2rem;
   font-family: 'Montserrat', sans-serif;
-  line-height: 1.7rem; }
+  line-height: 1.7rem;
+  background-color: #eee;
+  color: #222; }
 
 h1 {
   line-height: 2rem;
@@ -21,14 +25,6 @@ h2 {
 header {
   font-family: 'IBM Plex Sans', sans-serif; }
 
-.navigation {
-  width: 100%;
-  background-color: #777;
-  position: fixed;
-  margin: auto auto;
-  color: white;
-  padding: 1rem; }
-
 .container {
   box-sizing: border-box;
   max-width: 1000px;
@@ -41,7 +37,7 @@ p:not(:last-of-type) {
   margin-bottom: 1rem; }
 
 .light {
-  color: #777; }
+  color: #666; }
 
 .row {
   display: flex;
@@ -93,7 +89,7 @@ p:not(:last-of-type) {
   min-height: 8rem;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: flex-start; }
 
 .portfolio-body {
   min-height: 14rem;

@@ -12,10 +12,6 @@ function hidePage() {
 
 }
 
-function init() {
-    handleScroll(null);
-}
-
 function handleScroll(e) {
     const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     const max = document.querySelector("body").scrollHeight - vh;
@@ -23,7 +19,6 @@ function handleScroll(e) {
     let cur = this.scrollY;
 
     const unit = max / pages;
-    console.log(cur, max, unit);
     let toShow = 1;
     while (cur > unit) {
         cur -= unit;
@@ -32,8 +27,29 @@ function handleScroll(e) {
     showPage(toShow);
 }
 
+function initLinks() {
+    const links = document.querySelectorAll("a");
+    links.forEach(link => {
+        const attr = link.getAttribute("data-href");
+        if (attr) {
+            link.addEventListener("click", function (e) {
+                event.preventDefault();
+                const active = link.classList.contains("active");
+                if (!active) {
+                    const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+                    const max = document.querySelector("body").scrollHeight - vh;
+                    const pages = document.querySelectorAll(".page").length;
+                    const unit = max / pages;
+                    window.scrollTo(0, unit * (attr - 1) * 1.05);
+                }
+            });
+        }
+    });
+}
+
 window.addEventListener('scroll', function (e) { handleScroll(e); });
 
 window.onload = function () {
-    init();
+    this.handleScroll();
+    this.initLinks();
 }
