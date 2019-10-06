@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(240,240,240);
+    color: rgb(40,40,40);
+}
+
+/* COLORS */
+.light {
+    color: rgb(140,140,140);
+}
+
+/* TYPOGRAPHY */
+body {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+h1, h2, h3, h4 {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+h1 {
+    margin-bottom: 2rem;
+}
+
+/* MARGINS AND PADDINGS */
+.mb-05 {
+    margin-bottom: .5rem;
+}
+.mb-1 {
+    margin-bottom: 1rem;
+}
+.mb-2 {
+    margin-bottom: 2rem;
+}
+.px-2 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.py-1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* NAVIGATION */
+.navigation {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.navigation a {
+    box-sizing: border-box;
+    display: inline-block;
+    color: rgb(70,70,70);
+    min-width: 5rem;
+    border: 1px solid transparent;
+}
+.navigation a:hover {
+    box-sizing: border-box;
+    display: inline-block;
+    color: rgb(0,0,0);
+    min-width: 5rem;
+    border: 1px solid black;
+}
+
+/* PAGE ELEMENTS */
+.page-container {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.page {
+    position: absolute;
+    max-width: 1000px;
+}
+.page-enter {
+  opacity: 0;
+  transform: scale(1.1);
+}
+.page-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+.page-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+.page-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* ROW */
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.half {
+    box-sizing: border-box;
+    width: 500px;
+}
+
+/* SECTIONS */
+.section {
+    padding: 1rem;
+}
+
+/* BADGES */
+.badge {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: .2rem .6rem;
+    line-height: 1.2rem;
+    margin: .25rem 0;
+    font-size: 1rem;
+    border: 1px solid rgba(0,0,0,0.45);
+    border-radius: .4rem;
+}
