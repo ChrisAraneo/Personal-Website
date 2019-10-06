@@ -24,7 +24,21 @@ function About() {
                     <Section className="mb-2">
                         <SectionHeader>Umiejętności</SectionHeader>
                         <SectionBody>
-                            <span className="badge">JavaScript ES6</span> <span className="badge">Java</span> <span className="badge">PHP</span> <span className="badge">React</span> <span className="badge">React Native</span> <span className="badge">HTML 5</span> <span className="badge">JSON</span> <span className="badge">XML</span> <span className="badge">CSS 3</span> <span className="badge">SASS</span> <span className="badge">Bootstrap</span> <span className="badge">Git</span> <span className="badge">NPM / Yarn</span> <span className="badge">Gulp</span> <span className="badge">Android Studio</span>
+                            <span className="badge">JavaScript ES6</span>
+                            <span className="badge">Java</span>
+                            <span className="badge">PHP</span>
+                            <span className="badge">React</span>
+                            <span className="badge">React Native</span>
+                            <span className="badge">HTML 5</span>
+                            <span className="badge">JSON</span>
+                            <span className="badge">XML</span>
+                            <span className="badge">CSS 3</span>
+                            <span className="badge">SASS</span>
+                            <span className="badge">Bootstrap</span>
+                            <span className="badge">Git</span>
+                            <span className="badge">NPM / Yarn</span>
+                            <span className="badge">Gulp</span>
+                            <span className="badge">Android Studio</span>
                         </SectionBody>
                     </Section>
                 </Row>

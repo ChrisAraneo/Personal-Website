@@ -11,7 +11,7 @@ function Contact() {
             <Section>
                 <SectionHeader>Kontakt</SectionHeader>
                 <SectionBody>
-                    <p>{`\{Work in progress\}`}</p>
+                    <p>{`{Work in progress}`}</p>
                 </SectionBody>
             </Section>
         </Row>

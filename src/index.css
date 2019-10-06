@@ -60,16 +60,18 @@ h1 {
 .navigation a {
     box-sizing: border-box;
     display: inline-block;
-    color: rgb(70,70,70);
+    color: rgb(80,80,80);
     min-width: 5rem;
     border: 1px solid transparent;
+    line-height: 1.7rem;
 }
 .navigation a:hover {
     box-sizing: border-box;
     display: inline-block;
     color: rgb(0,0,0);
     min-width: 5rem;
-    border: 1px solid black;
+    line-height: 2.5rem;
+    border: 1px solid transparent;
 }
 
 /* PAGE ELEMENTS */
@@ -85,6 +87,7 @@ h1 {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    overflow: hidden;
 }
 .page {
     position: absolute;
@@ -118,6 +121,7 @@ h1 {
 .half {
     box-sizing: border-box;
     width: 500px;
+    min-height: 28rem;
 }
 
 /* SECTIONS */
@@ -135,4 +139,91 @@ h1 {
     font-size: 1rem;
     border: 1px solid rgba(0,0,0,0.45);
     border-radius: .4rem;
+    background-color: rgba(0,0,0,0.0075)
+}
+.badge:not(:last-of-type) {
+    margin-right: .5rem;
+}
+
+/* BUTTONS */
+button:focus { outline: none; }
+.button {
+    box-sizing: border-box;
+    border: none;
+    color: white;
+    padding: .75rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: .9rem;
+    text-transform: uppercase;
+    min-width: 46%;
+    margin: 2%;
+    font-weight: 600;
+    border-radius: .4rem;
+}
+.button {
+    background-color: #444;   
+}
+.button:hover {
+    background-color: #000;
+}
+.button.disabled {
+    background-color: #ddd;
+}
+
+/* PROJECT */
+.project-container {
+    position: absolute;
+    padding: 1rem;
+}
+.project-container-enter {
+    opacity: 0;
+    transform: translateY(200px);
+}
+.project-container-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 200ms, transform 200ms;
+}
+.project-container-exit {
+    opacity: 1;
+    transform: translateY(0px);
+}
+.project-container-exit-active {
+    opacity: 0;
+    transform: translateY(-200px);
+    transition: opacity 200ms, transform 200ms;
+}
+
+.project-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.project-header h2 {
+    line-height: 6rem;
+}
+.project-index {
+    line-height: 6rem;
+    position: absolute;
+    display: block;
+    width: 100%;
+    text-align: right;
+    color:  rgba(0,0,0,0.03);
+    margin-top: .25rem;
+    font-size: 8rem;
+    z-index: -100;
+}
+.project-body {
+    min-height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.project-footer {
+}
+.project-buttons-container {
+    position: relative;
+    margin-top: 27rem;
 }

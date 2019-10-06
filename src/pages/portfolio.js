@@ -17,7 +17,7 @@ class Portfolio extends React.Component {
     projects = [
         {
             index: 0,
-            header: 'Eurostall',
+            header: 'Strona internetowa Eurostall',
             body: 'Responsywna strona internetowa firmy oferującej projektowanie i realizację konstrukcji stalowych. Wykonana w 2018 roku w ramach praktyk studenckich. Zaktualizowana w 2019 roku. Jednym z wyzwań było napisanie arkuszy stylów oraz skryptów samodzielnie, bez użycia dodatkowych bibliotek.',
             technologies: ['HTML 5', 'CSS 3', 'JavaScript']
         },
@@ -38,7 +38,7 @@ class Portfolio extends React.Component {
             header: 'Strona Klubu Miłośników Podróży',
             body: 'Project w trakcie rozwoju. Serwis internetowy wrocławskiego Klubu Miłośników Podróży. Serwis ma umożliwiać publikowanie aktualności i przyszłych spotkań uczestników, udostępnianie zdjęć z podróży, oznaczanie zwiedzonych miejsc na wirtualnym globusie.',
             technologies: ['React', 'JavaScript', 'HTML 5', 'CSS 3', 'PHP', 'Bootstrap', 'WebGL Earth', 'Git']
-        },
+        }
     ];
 
     render() {
@@ -46,30 +46,40 @@ class Portfolio extends React.Component {
             <Row>
                 <Half>
                     <Section>
-                        <SectionHeader>Portfolio</SectionHeader>
+
                         <SectionBody>
-                            <button onClick={() => this.setState({ index: this.state.index - 1 })}>Poprzedni</button>
-                            <button onClick={() => this.setState({ index: this.state.index + 1 })}>Następny</button>
+
                         </SectionBody>
                     </Section>
                 </Half>
                 <Half>
-                    {this.projects.map(({ index, header, body, technologies }) => (
-                        <CSSTransition
-                            in={this.state.index == index}
-                            timeout={1000}
-                            classNames="page"
-                            unmountOnExit>
-                            <div className="page">
-                                <Project
-                                    header={header}
-                                    body={body}
-                                    technologies={technologies} />
-                            </div>
-                        </CSSTransition>
-                    ))}
+                    <div>
+                        {this.projects.map(({ index, header, body, technologies }) => (
+                            <CSSTransition
+                                in={this.state.index == index}
+                                timeout={1000}
+                                classNames="project-container"
+                                unmountOnExit>
+                                <div className="project-container">
+                                    <Project
+                                        index={index}
+                                        header={header}
+                                        body={body}
+                                        technologies={technologies} />
+                                </div>
+                            </CSSTransition>
+                        ))}
+                    </div>
+                    <div className="project-buttons-container">
+                        <button
+                            className={`button ${this.state.index <= 0 ? 'disabled' : ''}`} disabled={this.state.index <= 0 ? true : false} onClick={() => this.setState({ index: this.state.index - 1 })}>Poprzedni projekt</button>
+                        <button
+                            className={`button ${this.state.index >= this.projects.length - 1 ? 'disabled' : ''}`} disabled={this.state.index >= this.projects.length - 1 ? true : false} onClick={() => this.setState({ index: this.state.index + 1 })}>Następny projekt</button>
+                    </div>
+
+
                 </Half>
-            </Row>
+            </Row >
         );
     }
 }
