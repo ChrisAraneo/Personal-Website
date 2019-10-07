@@ -21,7 +21,7 @@ function About() {
 
             <Half>
                 <Row>
-                    <Section className="mb-2">
+                    <Section className="mb-1">
                         <SectionHeader>Umiejętności</SectionHeader>
                         <SectionBody>
                             <span className="badge">JavaScript ES6</span>
@@ -46,11 +46,11 @@ function About() {
                     <Section>
                         <SectionHeader>Wykształcenie</SectionHeader>
                         <SectionBody>
-                            <div className="mb-2">
+                            <div className="mb-1">
                                 <p className="light mb-05">2019 - obecnie</p>
                                 <p>Studia podyplomowe, kurs Technologie Internetowe, Politechnika Wrocławska.</p>
                             </div>
-                            <div className="mb-2">
+                            <div className="mb-1">
                                 <p className="light mb-05">2015 - 2019</p>
                                 <p>Studia inżynierskie, kierunek Informatyka na wydziale Podstawowych Problemów Techniki, Politechnika Wrocławska.</p>
                             </div>

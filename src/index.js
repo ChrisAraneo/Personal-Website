@@ -19,6 +19,12 @@ import Contact from './pages/contact'
 
 class App extends React.Component {
 
+    breakpoint = 1024;
+
+    state = {
+        mobile: false
+    }
+
     /* Routes */
     routes = [
         { path: '/', name: 'Start', Component: Home },
@@ -27,11 +33,28 @@ class App extends React.Component {
         { path: '/contact', name: 'Kontakt', Component: Contact },
     ];
 
+    updateDimensions() {
+        if (window.innerWidth < this.breakpoint) {
+            this.setState({ mobile: true });
+        } else {
+            this.setState({ mobile: false });
+        }
+    }
+
+    componentDidMount() {
+        this.updateDimensions();
+        window.addEventListener("resize", this.updateDimensions.bind(this));
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener("resize", this.updateDimensions.bind(this));
+    }
+
     render() {
         return (
             <Router>
                 <Nav routes={this.routes} />
-                <PageContainer routes={this.routes} />
+                <PageContainer mobile={this.state.mobile} routes={this.routes} />
             </Router>
         );
     }

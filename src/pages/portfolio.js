@@ -41,46 +41,76 @@ class Portfolio extends React.Component {
         }
     ];
 
-    render() {
+    renderMobile() {
+        return (
+            <Row>
+                {this.projects.map(({ index, header, body, technologies }) => (
+                    <CSSTransition
+                        in={this.state.index == index}
+                        timeout={1000}
+                        classNames="project-container"
+                        unmountOnExit>
+                        <div className="project-container">
+                            <Project
+                                index={index}
+                                header={header}
+                                body={body}
+                                technologies={technologies} />
+                        </div>
+                    </CSSTransition>
+                ))}
+                <div className="project-buttons-container">
+                    <button
+                        className={`button ${this.state.index <= 0 ? 'disabled' : ''}`} disabled={this.state.index <= 0 ? true : false} onClick={() => this.setState({ index: this.state.index - 1 })}>Poprzedni projekt</button>
+                    <button
+                        className={`button ${this.state.index >= this.projects.length - 1 ? 'disabled' : ''}`} disabled={this.state.index >= this.projects.length - 1 ? true : false} onClick={() => this.setState({ index: this.state.index + 1 })}>Następny projekt</button>
+                </div>
+            </Row >
+        );
+    }
+
+    renderDesktop() {
         return (
             <Row>
                 <Half>
                     <Section>
-
-                        <SectionBody>
-
-                        </SectionBody>
+                        Hej itsa me Mario
                     </Section>
                 </Half>
                 <Half>
-                    <div>
-                        {this.projects.map(({ index, header, body, technologies }) => (
-                            <CSSTransition
-                                in={this.state.index == index}
-                                timeout={1000}
-                                classNames="project-container"
-                                unmountOnExit>
-                                <div className="project-container">
-                                    <Project
-                                        index={index}
-                                        header={header}
-                                        body={body}
-                                        technologies={technologies} />
-                                </div>
-                            </CSSTransition>
-                        ))}
-                    </div>
+                    {this.projects.map(({ index, header, body, technologies }) => (
+                        <CSSTransition
+                            in={this.state.index == index}
+                            timeout={1000}
+                            classNames="project-container"
+                            unmountOnExit>
+                            <div className="project-container">
+                                <Project
+                                    index={index}
+                                    header={header}
+                                    body={body}
+                                    technologies={technologies} />
+                            </div>
+                        </CSSTransition>
+                    ))}
                     <div className="project-buttons-container">
                         <button
                             className={`button ${this.state.index <= 0 ? 'disabled' : ''}`} disabled={this.state.index <= 0 ? true : false} onClick={() => this.setState({ index: this.state.index - 1 })}>Poprzedni projekt</button>
                         <button
                             className={`button ${this.state.index >= this.projects.length - 1 ? 'disabled' : ''}`} disabled={this.state.index >= this.projects.length - 1 ? true : false} onClick={() => this.setState({ index: this.state.index + 1 })}>Następny projekt</button>
                     </div>
-
-
                 </Half>
             </Row >
         );
+    }
+
+    render() {
+        if (this.props.mobile) {
+            return this.renderMobile();
+        }
+        else {
+            return this.renderDesktop();
+        }
     }
 }
 

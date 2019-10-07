@@ -1,19 +1,27 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const Nav = (props) => (
-    <nav className="navigation">
-        {props.routes.map(route => (
-            <NavLink
-                key={route.path}
-                to={route.path}
-                className="px-2 py-1"
-                activeClassName="active"
-            >
-                {route.name}
-            </NavLink>
-        ))}
-    </nav>
-);
+class Nav extends React.Component {
+
+    handleClick() {
+        this.setState({ open: !this.state.open })
+    }
+
+    render() {
+        return (
+            <nav className='navigation'>
+                <button className='toggle'>MENU</button>
+                {this.props.routes.map(route => (
+                    <NavLink
+                        key={route.path}
+                        to={route.path}
+                        activeClassName="active"
+                    >
+                        {route.name}
+                    </NavLink>
+                ))}
+            </nav>);
+    }
+}
 
 export default Nav;
