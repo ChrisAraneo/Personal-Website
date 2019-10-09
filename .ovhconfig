@@ -1,10 +1,6 @@
-; more infos on this file can be found here :
-; http://www.ovh.co.uk/g1175.php-fpm-optimisation
-
 app.engine=php
-app.engine.version=7.0
-
-http.firewall=none
+app.engine.version=7.3
+http.firewall=security
 environment=production
-
 container.image=stable
+

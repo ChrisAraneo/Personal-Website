@@ -11,7 +11,7 @@ function Home() {
             <Section>
                 <SectionHeader>Krzysztof Pająk</SectionHeader>
                 <SectionBody>
-
+                    {'{ WEBSITE IS CURRENTLY UNDER DEVELOPMENT }'}
                 </SectionBody>
             </Section>
         </Row>

@@ -9,7 +9,7 @@ const PageContainer = (props) => (
                 {({ match }) => (
                     <CSSTransition
                         in={match != null}
-                        timeout={1000}
+                        timeout={500}
                         classNames="page"
                         unmountOnExit>
                         <div className="page">
@@ -20,25 +20,6 @@ const PageContainer = (props) => (
             </Route>
         ))}
     </div>
-    /*
-    <div className="page-container">
-        {props.routes.map(({ path, Component }) => (
-            <Route key={path} exact path={path}>
-                {({ match }) => (
-                    <CSSTransition
-                        in={match != null}
-                        timeout={1000}
-                        classNames="page"
-                        unmountOnExit>
-                        <div className="page">
-                            <Component mobile={props.mobile} />
-                        </div>
-                    </CSSTransition>
-                )}
-            </Route>
-        ))}
-    </div>
-    */
 );
 
 export default PageContainer;

@@ -47,7 +47,7 @@ class Portfolio extends React.Component {
                 {this.projects.map(({ index, header, body, technologies }) => (
                     <CSSTransition
                         in={this.state.index == index}
-                        timeout={1000}
+                        timeout={500}
                         classNames="project-container"
                         unmountOnExit>
                         <div className="project-container">
@@ -74,7 +74,7 @@ class Portfolio extends React.Component {
             <Row>
                 <Half>
                     <Section>
-                        Hej itsa me Mario
+                        PORTFOLIO
                     </Section>
                 </Half>
                 <Half>

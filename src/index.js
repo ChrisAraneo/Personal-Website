@@ -53,7 +53,7 @@ class App extends React.Component {
     render() {
         return (
             <Router>
-                <Nav routes={this.routes} />
+                <Nav routes={this.routes} mobile={this.state.mobile} />
                 <PageContainer mobile={this.state.mobile} routes={this.routes} />
             </Router>
         );

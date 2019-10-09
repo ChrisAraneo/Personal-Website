@@ -7,10 +7,8 @@
 body {
     background-color: rgb(240,240,240);
     color: rgb(40,40,40);
-}
-
-.root {
     overflow: hidden;
+    overflow-y: auto;
 }
 
 /* COLORS */
@@ -51,36 +49,102 @@ h1 {
 }
 
 /* NAVIGATION */
-.navigation {
+.navigation,
+.navigation-mobile {
     box-sizing: border-box;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
     width: 100%;
+    min-height: 4rem;
+    background-color: transparent;
+}
+.navigation {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    min-height: 4rem;
 }
-.navigation a {
+.navigation-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    z-index: 99;
+}
+.navigation a,
+.navigation-mobile a {
     box-sizing: border-box;
     display: inline-block;
     color: rgb(80,80,80);
-    min-width: 5rem;
+    min-width: 8rem;
     border: 1px solid transparent;
     line-height: 1.7rem;
+    text-align: center;
+    text-decoration: none;
 }
-.navigation a:hover {
-    box-sizing: border-box;
-    display: inline-block;
+.navigation-mobile a {
+    font-size: 1.5rem;
+    line-height: 4rem;
+}
+.navigation a:hover,
+.navigation-mobile a:hover {
     color: rgb(0,0,0);
-    min-width: 5rem;
-    line-height: 2.5rem;
-    border: 1px solid transparent;
+    text-decoration: underline;
 }
+.toggle {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    width: 4rem;
+    height: 4rem;
+    z-index: 100;
+}
+.navbar {
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: rgba(240,240,240);
+    transition: height .3s;
+    z-index: 98;
+    border-bottom: 1px solid #aaa;
+    filter: drop-shadow(0px 0px 1rem rgba(0,0,0,0.1));
+}
+.navbar.active {
+    height: 100vh;
+    filter: drop-shadow(0px 0px 1rem rgba(0,0,0,0.1));
+    border-bottom: 1px solid transparent;
+}
+/* NAVLINK ANIM */
+.navlink-enter {
+    opacity: 0;
+    transform: scale(1.3);
+  }
+  .navlink-enter-active {
+    opacity: 1;
+    transform: scale(1.0);
+    transition: opacity 400ms, transform 400ms;
+  }
+  .navlink-exit {
+    opacity: 1;
+    transform: scale(1.0);
+  }
+  .navlink-exit-active {
+    opacity: 0;
+    transform: scale(.9);
+    transition: opacity 400ms, transform 400ms;
+  }
 
 /* PAGE ELEMENTS */
 .page-container {
+    padding-top: 0;
     box-sizing: border-box;
     position: absolute;
     top: 0;
@@ -93,13 +157,16 @@ h1 {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    overflow: hidden;
+    overflow-y: auto;
 }
 @media only screen and (max-width: 1023.75px) {
     .page-container {
+        padding-top: 5rem;
+        box-sizing: border-box;
         position: static;
         display: flex;
+        flex-direction: column;
         justify-content: flex-start;
         align-items: center;
     }
@@ -122,7 +189,7 @@ h1 {
 .page-enter-active {
   opacity: 1;
   transform: scale(1);
-  transition: opacity 300ms, transform 300ms;
+  transition: opacity 400ms, transform 400ms;
 }
 .page-exit {
   opacity: 1;
@@ -131,7 +198,7 @@ h1 {
 .page-exit-active {
   opacity: 0;
   transform: scale(0.9);
-  transition: opacity 300ms, transform 300ms;
+  transition: opacity 400ms, transform 400ms;
 }
 
 /* ROW */
@@ -206,6 +273,7 @@ button:focus { outline: none; }
 .project-container {
     position: absolute;
     padding: 1rem;
+    max-width: 100%;
 }
 .project-container-enter {
     opacity: 0;
@@ -214,7 +282,7 @@ button:focus { outline: none; }
 .project-container-enter-active {
     opacity: 1;
     transform: translateY(0);
-    transition: opacity 200ms, transform 200ms;
+    transition: opacity 300ms, transform 300ms;
 }
 .project-container-exit {
     opacity: 1;
@@ -223,7 +291,7 @@ button:focus { outline: none; }
 .project-container-exit-active {
     opacity: 0;
     transform: translateY(-200px);
-    transition: opacity 200ms, transform 200ms;
+    transition: opacity 300ms, transform 300ms;
 }
 .project-header {
     display: flex;
@@ -241,6 +309,7 @@ button:focus { outline: none; }
     text-align: right;
     color:  rgba(0,0,0,0.03);
     margin-top: .25rem;
+    margin-left: -2rem;
     font-size: 8rem;
     z-index: -100;
 }
