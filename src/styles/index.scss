@@ -8,7 +8,7 @@ body {
     background-color: rgb(240,240,240);
     color: rgb(40,40,40);
     overflow: hidden;
-    overflow-y: none;
+    overflow-y: auto;
 }
 
 /* COLORS */
@@ -116,7 +116,7 @@ h1 {
 .menu-button .burger::after {
     width: 2.5rem;
     height: .275rem;
-    background: #333;
+    background: #aaa;
     border-radius: .1rem;
     transition: all .2s ease-in-out;
 }
@@ -141,6 +141,7 @@ h1 {
 }
 .menu-button.active .burger::after {
     transform: rotate(-45deg) translate(2.1rem, 2.1rem);
+    background: #333;
 }
 .navbar {
     box-sizing: border-box;
