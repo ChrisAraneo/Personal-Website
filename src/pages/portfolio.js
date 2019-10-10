@@ -61,14 +61,19 @@ class Portfolio extends React.Component {
 
                         </>
                     ))}
-
                 </div>
-                <div className="project-buttons-container">
-                    <button
-                        className={`button ${this.state.index <= 0 ? 'disabled' : ''}`} disabled={this.state.index <= 0 ? true : false} onClick={() => this.setState({ index: this.state.index - 1 })}>Poprzedni</button>
-                    <button
-                        className={`button ${this.state.index >= this.projects.length - 1 ? 'disabled' : ''}`} disabled={this.state.index >= this.projects.length - 1 ? true : false} onClick={() => this.setState({ index: this.state.index + 1 })}>Następny</button>
-                </div>
+                <CSSTransition
+                    in={true}
+                    timeout={500}
+                    classNames="page"
+                    unmountOnExit>
+                    <div className="project-buttons-container">
+                        <button
+                            className={`button ${this.state.index <= 0 ? 'disabled' : ''}`} disabled={this.state.index <= 0 ? true : false} onClick={() => this.setState({ index: this.state.index - 1 })}>Poprzedni</button>
+                        <button
+                            className={`button ${this.state.index >= this.projects.length - 1 ? 'disabled' : ''}`} disabled={this.state.index >= this.projects.length - 1 ? true : false} onClick={() => this.setState({ index: this.state.index + 1 })}>Następny</button>
+                    </div>
+                </CSSTransition>
             </>
         );
     }
