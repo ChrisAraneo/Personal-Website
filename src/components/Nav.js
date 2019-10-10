@@ -15,8 +15,10 @@ class Nav extends React.Component {
     renderMobile() {
         return (
             <>
-                <div className={`navbar ${this.state.open ? 'active' : ''}`}></div>
-                <button className='toggle' onClick={() => this.handleClick()}>MENU</button>
+                <div className={`navbar ${this.state.open ? 'active' : ''}`} onClick={() => this.handleClick()}></div>
+                <div className={`menu-button ${this.state.open ? 'active' : ''}`}>
+                    <div className="burger" onClick={() => this.handleClick()}></div>
+                </div>
                 <CSSTransition
                     in={this.state.open}
                     timeout={500}
@@ -58,7 +60,7 @@ class Nav extends React.Component {
     }
 
     render() {
-        if (this.props.mobile == true) {
+        if (this.props.mobile) {
             return this.renderMobile();
         } else {
             return this.renderDesktop();

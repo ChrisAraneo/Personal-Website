@@ -28,6 +28,9 @@ h1, h2, h3, h4 {
 h1 {
     margin-bottom: 2rem;
 }
+.text-center {
+    text-align: center;
+}
 
 /* MARGINS AND PADDINGS */
 .mb-05 {
@@ -95,7 +98,7 @@ h1 {
     color: rgb(0,0,0);
     text-decoration: underline;
 }
-.toggle {
+.menu-button {
     box-sizing: border-box;
     position: fixed;
     top: 0rem;
@@ -103,6 +106,42 @@ h1 {
     width: 4rem;
     height: 4rem;
     z-index: 100;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-button .burger,
+.menu-button .burger::before,
+.menu-button .burger::after {
+    width: 2.5rem;
+    height: .275rem;
+    background: #aaa;
+    border-radius: .1rem;
+    transition: all .2s ease-in-out;
+}
+.menu-button .burger::before,
+.menu-button .burger::after {
+    content: '';
+    position: absolute;
+}
+.menu-button .burger::before {
+    transform: translateY(-.8rem);
+}
+.menu-button .burger::after {
+    transform: translateY(.8rem);
+}
+.menu-button.active .burger {
+    transform: translateX(-3rem);
+    background: transparent;
+}
+.menu-button.active .burger::before {
+    transform: rotate(45deg) translate(2.1rem, -2.1rem);
+    background: #333;
+}
+.menu-button.active .burger::after {
+    transform: rotate(-45deg) translate(2.1rem, 2.1rem);
+    background: #333;
 }
 .navbar {
     box-sizing: border-box;
@@ -114,8 +153,8 @@ h1 {
     background-color: rgba(240,240,240);
     transition: height .3s;
     z-index: 98;
-    border-bottom: 1px solid #aaa;
-    filter: drop-shadow(0px 0px 1rem rgba(0,0,0,0.1));
+    border-bottom: 2px solid #dfdfdf;
+    filter: drop-shadow(0px 0px 1rem rgba(0,0,0,0.125));
 }
 .navbar.active {
     height: 100vh;
@@ -205,8 +244,15 @@ h1 {
 .row {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     width: 100%;
+}
+.projects-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 10rem);
 }
 @media only screen and (max-width: 1023.75px) {
     .half {
@@ -299,7 +345,8 @@ button:focus { outline: none; }
     justify-content: flex-start;
 }
 .project-header h2 {
-    line-height: 6rem;
+    line-height: 2rem;
+    padding: 2rem 0;
 }
 .project-index {
     line-height: 6rem;
@@ -315,11 +362,43 @@ button:focus { outline: none; }
 }
 .project-body {
     min-height: 12rem;
+    margin-bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 .project-buttons-container {
+    box-sizing: border-box;
     position: relative;
-    margin-top: 27rem;
+    margin-top: 25rem;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    background-color: transparent;
+    border-top: 2px solid transparent;
+    filter: drop-shadow(0px 0px 1rem rgba(0,0,0,0));
+}
+@media only screen and (max-width: 1023.75px) {
+    .project-buttons-container {
+        position: absolute;
+        margin-top: 0;
+        bottom: -5rem;
+        left: 0;
+        width: 100%;
+        height: 4rem;
+        z-index: 97;
+    }
+    .project-header h2 {
+        line-height: 2rem;
+        padding: 2rem 0;
+    }
+    .project-body {
+        min-height: 0;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
 }

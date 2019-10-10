@@ -1,12 +1,9 @@
 import React from 'react';
 import { CSSTransition } from 'react-transition-group'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import Row from '../components/Row';
 import Half from '../components/Half';
 import Section from '../components/Section';
-import SectionHeader from '../components/SectionHeader';
-import SectionBody from '../components/SectionBody';
 import Project from '../components/Project';
 
 class Portfolio extends React.Component {
@@ -43,29 +40,32 @@ class Portfolio extends React.Component {
 
     renderMobile() {
         return (
-            <Row>
-                {this.projects.map(({ index, header, body, technologies }) => (
-                    <CSSTransition
-                        in={this.state.index == index}
-                        timeout={500}
-                        classNames="project-container"
-                        unmountOnExit>
-                        <div className="project-container">
-                            <Project
-                                index={index}
-                                header={header}
-                                body={body}
-                                technologies={technologies} />
-                        </div>
-                    </CSSTransition>
-                ))}
-                <div className="project-buttons-container">
-                    <button
-                        className={`button ${this.state.index <= 0 ? 'disabled' : ''}`} disabled={this.state.index <= 0 ? true : false} onClick={() => this.setState({ index: this.state.index - 1 })}>Poprzedni projekt</button>
-                    <button
-                        className={`button ${this.state.index >= this.projects.length - 1 ? 'disabled' : ''}`} disabled={this.state.index >= this.projects.length - 1 ? true : false} onClick={() => this.setState({ index: this.state.index + 1 })}>Następny projekt</button>
-                </div>
-            </Row >
+            <>
+                <Row className="projects-row">
+                    {this.projects.map(({ index, header, body, technologies }) => (
+                        <CSSTransition
+                            key={index}
+                            in={this.state.index === index}
+                            timeout={500}
+                            classNames="project-container"
+                            unmountOnExit>
+                            <div className="project-container">
+                                <Project
+                                    index={index}
+                                    header={header}
+                                    body={body}
+                                    technologies={technologies} />
+                            </div>
+                        </CSSTransition>
+                    ))}
+                    <div className="project-buttons-container">
+                        <button
+                            className={`button ${this.state.index <= 0 ? 'disabled' : ''}`} disabled={this.state.index <= 0 ? true : false} onClick={() => this.setState({ index: this.state.index - 1 })}>Poprzedni</button>
+                        <button
+                            className={`button ${this.state.index >= this.projects.length - 1 ? 'disabled' : ''}`} disabled={this.state.index >= this.projects.length - 1 ? true : false} onClick={() => this.setState({ index: this.state.index + 1 })}>Następny</button>
+                    </div>
+                </Row >
+            </>
         );
     }
 
@@ -80,7 +80,8 @@ class Portfolio extends React.Component {
                 <Half>
                     {this.projects.map(({ index, header, body, technologies }) => (
                         <CSSTransition
-                            in={this.state.index == index}
+                            key={index}
+                            in={this.state.index === index}
                             timeout={1000}
                             classNames="project-container"
                             unmountOnExit>

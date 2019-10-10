@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Row = (props) => (
-    <div className="row">{props.children}</div>
+    <div className={`row ${props.className}`}>{props.children}</div>
 );
 
 export default Row;
