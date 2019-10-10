@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 /* Styling */
-import './index.css'
+import './styles/index.css'
 
 /* Components */
 import Nav from './components/Nav';
@@ -18,6 +18,7 @@ import Contact from './pages/contact'
 
 class App extends React.Component {
 
+    /* Mobile breakpoint */
     breakpoint = 1024;
 
     state = {
