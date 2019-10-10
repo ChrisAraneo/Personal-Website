@@ -41,30 +41,34 @@ class Portfolio extends React.Component {
     renderMobile() {
         return (
             <>
-                <Row className="projects-row">
+                <div className="projects-row">
                     {this.projects.map(({ index, header, body, technologies }) => (
-                        <CSSTransition
-                            key={index}
-                            in={this.state.index === index}
-                            timeout={500}
-                            classNames="project-container"
-                            unmountOnExit>
-                            <div className="project-container">
-                                <Project
-                                    index={index}
-                                    header={header}
-                                    body={body}
-                                    technologies={technologies} />
-                            </div>
-                        </CSSTransition>
+                        <>
+                            <CSSTransition
+                                key={index}
+                                in={this.state.index === index}
+                                timeout={500}
+                                classNames="project-container"
+                                unmountOnExit>
+                                <div className="project-container">
+                                    <Project
+                                        index={index}
+                                        header={header}
+                                        body={body}
+                                        technologies={technologies} />
+                                </div>
+                            </CSSTransition>
+
+                        </>
                     ))}
-                    <div className="project-buttons-container">
-                        <button
-                            className={`button ${this.state.index <= 0 ? 'disabled' : ''}`} disabled={this.state.index <= 0 ? true : false} onClick={() => this.setState({ index: this.state.index - 1 })}>Poprzedni</button>
-                        <button
-                            className={`button ${this.state.index >= this.projects.length - 1 ? 'disabled' : ''}`} disabled={this.state.index >= this.projects.length - 1 ? true : false} onClick={() => this.setState({ index: this.state.index + 1 })}>Następny</button>
-                    </div>
-                </Row >
+
+                </div>
+                <div className="project-buttons-container">
+                    <button
+                        className={`button ${this.state.index <= 0 ? 'disabled' : ''}`} disabled={this.state.index <= 0 ? true : false} onClick={() => this.setState({ index: this.state.index - 1 })}>Poprzedni</button>
+                    <button
+                        className={`button ${this.state.index >= this.projects.length - 1 ? 'disabled' : ''}`} disabled={this.state.index >= this.projects.length - 1 ? true : false} onClick={() => this.setState({ index: this.state.index + 1 })}>Następny</button>
+                </div>
             </>
         );
     }
