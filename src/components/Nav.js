@@ -8,16 +8,16 @@ class Nav extends React.Component {
         open: false
     }
 
-    handleClick() {
+    toggleNav() {
         this.setState({ open: !this.state.open })
     }
 
     renderMobile() {
         return (
             <>
-                <div className={`navbar ${this.state.open ? 'active' : ''}`} onClick={() => this.handleClick()}></div>
+                <div className={`navbar ${this.state.open ? 'active' : ''}`} onClick={() => this.toggleNav()}></div>
                 <div className={`menu-button ${this.state.open ? 'active' : ''}`}>
-                    <div className="burger" onClick={() => this.handleClick()}></div>
+                    <div className="burger" onClick={() => this.toggleNav()}></div>
                 </div>
                 <CSSTransition
                     in={this.state.open}
@@ -32,7 +32,7 @@ class Nav extends React.Component {
                                     to={route.path}
                                     className="navlink"
                                     activeClassName="active"
-                                    onClick={() => this.handleClick()}
+                                    onClick={() => { this.props.routeChange(route.name); this.toggleNav(); }}
                                 >
                                     {route.name}
                                 </NavLink>
@@ -52,6 +52,7 @@ class Nav extends React.Component {
                         key={route.path}
                         to={route.path}
                         activeClassName="active"
+                        onClick={() => { this.props.routeChange(route.name); }}
                     >
                         {route.name}
                     </NavLink>

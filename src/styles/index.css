@@ -7,7 +7,7 @@
 
 body {
   background-color: #f0f0f0;
-  color: #282828;
+  color: #464646;
   overflow: hidden;
   overflow-y: auto;
 }
@@ -15,6 +15,12 @@ body {
 /* COLORS */
 .light {
   color: #8c8c8c;
+}
+
+h1 {
+  background-image: linear-gradient(170deg, #0080b3 0%, #001868 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* TYPOGRAPHY */
@@ -26,10 +32,17 @@ body {
 
 h1, h2, h3, h4 {
   font-family: 'IBM Plex Sans', sans-serif;
+  margin-bottom: 1.5rem;
 }
 
 h1 {
-  margin-bottom: 2rem;
+  font-size: 2.3rem;
+  line-height: 2.8rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  line-height: 2.3rem;
 }
 
 .text-center {
@@ -61,7 +74,7 @@ h1 {
 
 /* NAVIGATION */
 .navigation,
-.navigation-mobile {
+.navigation-mobiles {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: fixed;
@@ -88,6 +101,7 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
   min-height: 4rem;
+  z-index: 1000;
 }
 
 .navigation-mobile {
@@ -105,7 +119,7 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
   min-height: 100vh;
-  z-index: 99;
+  z-index: 1000;
 }
 
 .navigation a,
@@ -223,6 +237,11 @@ h1 {
 }
 
 /* NAVLINK ANIM */
+.navlink,
+.navlink-enter {
+  z-index: 1000;
+}
+
 .navlink-enter {
   opacity: 0;
   -webkit-transform: scale(1.3);
@@ -283,7 +302,7 @@ h1 {
   overflow-y: auto;
 }
 
-@media only screen and (max-width: 1023.75px) {
+@media only screen and (max-width: 1023.8px), screen and (max-height: 639.8px) {
   .page-container {
     padding-top: 5rem;
     -webkit-box-sizing: border-box;
@@ -311,7 +330,7 @@ h1 {
   max-width: 1000px;
 }
 
-@media only screen and (max-width: 1023.75px) {
+@media only screen and (max-width: 1023.8px), screen and (max-height: 639.8px) {
   .page {
     position: static;
     max-width: 100%;
@@ -380,19 +399,17 @@ h1 {
   height: calc(100vh - 9rem);
 }
 
-@media only screen and (max-width: 1023.75px) {
+.half {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 500px;
+}
+
+@media only screen and (max-width: 1023.8px), screen and (max-height: 639.8px) {
   .half {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 50%;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .half {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    width: 500px;
   }
 }
 
@@ -459,11 +476,11 @@ button:focus {
           box-sizing: border-box;
   position: absolute;
   padding: 1rem;
-  max-width: 500px;
+  width: 500px;
   display: block;
 }
 
-@media only screen and (max-width: 1023.75px) {
+@media only screen and (max-width: 1023.8px), screen and (max-height: 639.8px) {
   .project-container {
     position: absolute;
     display: -webkit-box;
@@ -588,7 +605,7 @@ button:focus {
           filter: drop-shadow(0px 0px 1rem rgba(0, 0, 0, 0));
 }
 
-@media only screen and (max-width: 1023.75px) {
+@media only screen and (max-width: 1023.8px), screen and (max-height: 639.8px) {
   .project-buttons-container {
     position: fixed;
     margin-top: 0;
