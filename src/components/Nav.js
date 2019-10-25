@@ -46,18 +46,20 @@ class Nav extends React.Component {
 
     renderDesktop() {
         return (
-            <nav className='navigation'>
-                {this.props.routes.map(route => (
-                    <NavLink
-                        key={route.path}
-                        to={route.path}
-                        activeClassName="active"
-                        onClick={() => { this.props.routeChange(route.name); }}
-                    >
-                        {route.name}
-                    </NavLink>
-                ))}
-            </nav>);
+            <>
+                <nav className='navigation'>
+                    {this.props.routes.map(route => (
+                        <NavLink
+                            key={route.path}
+                            to={route.path}
+                            activeClassName="active"
+                            onClick={() => { this.props.routeChange(route.name); }}
+                        >
+                            {route.name}
+                        </NavLink>
+                    ))}
+                </nav>
+            </>);
     }
 
     render() {

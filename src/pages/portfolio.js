@@ -40,7 +40,7 @@ class Portfolio extends React.Component {
 
     renderMobile() {
         return (
-            <>
+            <div id="page" className="page">
                 <div className="projects-row">
                     {this.projects.map(({ index, header, body, technologies }) => (
                         <>
@@ -58,7 +58,6 @@ class Portfolio extends React.Component {
                                         technologies={technologies} />
                                 </div>
                             </CSSTransition>
-
                         </>
                     ))}
                 </div>
@@ -74,43 +73,51 @@ class Portfolio extends React.Component {
                             className={`button ${this.state.index >= this.projects.length - 1 ? 'disabled' : ''}`} disabled={this.state.index >= this.projects.length - 1 ? true : false} onClick={() => this.setState({ index: this.state.index + 1 })}>Następny</button>
                     </div>
                 </CSSTransition>
-            </>
+            </div>
         );
     }
 
     renderDesktop() {
         return (
-            <Row>
-                <Half>
-                    <Section>
-                        PORTFOLIO
-                    </Section>
-                </Half>
-                <Half>
-                    {this.projects.map(({ index, header, body, technologies }) => (
-                        <CSSTransition
-                            key={index}
-                            in={this.state.index === index}
-                            timeout={1000}
-                            classNames="project-container"
-                            unmountOnExit>
-                            <div className="project-container">
-                                <Project
-                                    index={index}
-                                    header={header}
-                                    body={body}
-                                    technologies={technologies} />
+            <>
+                <div id="page" className="page">
+                    <Row>
+                        <Half>
+                            <div className="img-container">
+                                <img src="img/project1.jpg" />
                             </div>
-                        </CSSTransition>
-                    ))}
-                    <div className="project-buttons-container">
-                        <button
-                            className={`button ${this.state.index <= 0 ? 'disabled' : ''}`} disabled={this.state.index <= 0 ? true : false} onClick={() => this.setState({ index: this.state.index - 1 })}>Poprzedni projekt</button>
-                        <button
-                            className={`button ${this.state.index >= this.projects.length - 1 ? 'disabled' : ''}`} disabled={this.state.index >= this.projects.length - 1 ? true : false} onClick={() => this.setState({ index: this.state.index + 1 })}>Następny projekt</button>
-                    </div>
-                </Half>
-            </Row >
+                            <div className="img-container-shadow">
+                            </div>
+                            <div className="img-container-shadow2">
+                            </div>
+                        </Half>
+                        <Half>
+                            {this.projects.map(({ index, header, body, technologies }) => (
+                                <CSSTransition
+                                    key={index}
+                                    in={this.state.index === index}
+                                    timeout={1000}
+                                    classNames="project-container"
+                                    unmountOnExit>
+                                    <div className="project-container">
+                                        <Project
+                                            index={index}
+                                            header={header}
+                                            body={body}
+                                            technologies={technologies} />
+                                    </div>
+                                </CSSTransition>
+                            ))}
+                        </Half>
+                    </Row >
+                </div>
+                <div className="project-buttons-container">
+                    <button
+                        className={`button ${this.state.index <= 0 ? 'disabled' : ''}`} disabled={this.state.index <= 0 ? true : false} onClick={() => this.setState({ index: this.state.index - 1 })}>Poprzedni projekt</button>
+                    <button
+                        className={`button ${this.state.index >= this.projects.length - 1 ? 'disabled' : ''}`} disabled={this.state.index >= this.projects.length - 1 ? true : false} onClick={() => this.setState({ index: this.state.index + 1 })}>Następny projekt</button>
+                </div>
+            </>
         );
     }
 

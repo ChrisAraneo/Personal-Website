@@ -65,7 +65,7 @@ class About extends React.Component {
 
     renderMobile() {
         return (
-            <>
+            <div id="page" className="page">
                 <Row>
                     {this.generateAboutSection()}
                 </Row >
@@ -75,25 +75,27 @@ class About extends React.Component {
                 <Row>
                     {this.generateEducationSection()}
                 </Row>
-            </>
+            </div>
         );
     }
 
     renderDesktop() {
         return (
-            <Row>
-                <Half>
-                    {this.generateAboutSection()}
-                </Half>
-                <Half>
-                    <Row>
-                        {this.generateSkillsSection()}
-                    </Row>
-                    <Row>
-                        {this.generateEducationSection()}
-                    </Row>
-                </Half>
-            </Row>
+            <div id="page" className="page">
+                <Row>
+                    <Half dark>
+                        {this.generateAboutSection()}
+                    </Half>
+                    <Half>
+                        <Row>
+                            {this.generateSkillsSection()}
+                        </Row>
+                        <Row>
+                            {this.generateEducationSection()}
+                        </Row>
+                    </Half>
+                </Row>
+            </div>
         );
     }
 

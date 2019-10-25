@@ -6,14 +6,16 @@ import SectionBody from '../components/SectionBody';
 
 function Contact() {
     return (
-        <Row>
-            <Section>
-                <SectionHeader>Kontakt</SectionHeader>
-                <SectionBody>
-                    <p>{`{Work in progress}`}</p>
-                </SectionBody>
-            </Section>
-        </Row>
+        <div id="page" className="page">
+            <Row>
+                <Section>
+                    <SectionHeader>Kontakt</SectionHeader>
+                    <SectionBody>
+                        <p>{`{Work in progress}`}</p>
+                    </SectionBody>
+                </Section>
+            </Row>
+        </div>
     )
 }
 

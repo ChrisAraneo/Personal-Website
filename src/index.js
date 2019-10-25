@@ -8,7 +8,7 @@ import './styles/index.css'
 /* Components */
 import Nav from './components/Nav';
 import PageContainer from './components/PageContainer';
-import SVGFigure from './components/SVGFigure';
+import Background from './components/Background';
 
 /* Pages */
 import Home from './pages/home'
@@ -27,7 +27,8 @@ class App extends React.Component {
         mobile: false,
         width: 0,
         height: 0,
-        run: true
+        run: true,
+        backgroundType: 0,
     }
 
     /* Routes */
@@ -59,10 +60,14 @@ class App extends React.Component {
     }
 
     handleRouteChange(route) {
-        if (route === "O mnie") {
-            document.getElementById("svg-1").beginElement();
-        } else {
-            document.getElementById("svg-2").beginElement();
+        if (route === "Start") {
+            this.setState({ backgroundType: 0 })
+        } else if (route === "O mnie") {
+            this.setState({ backgroundType: 1 })
+        } else if (route === "Portfolio") {
+            this.setState({ backgroundType: 2 })
+        } else if (route === "Kontakt") {
+            this.setState({ backgroundType: 3 })
         }
     }
 
@@ -71,7 +76,7 @@ class App extends React.Component {
         return (
             <Router>
                 <Nav routes={this.routes} mobile={this.state.mobile} routeChange={(route) => this.handleRouteChange(route)} />
-                <SVGFigure width={this.state.width} height={this.state.height} />
+                <Background type={this.state.backgroundType} mobile={this.state.mobile} />
                 <PageContainer mobile={this.state.mobile} routes={this.routes} />
             </Router>
         );
