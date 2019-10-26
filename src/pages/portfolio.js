@@ -6,6 +6,10 @@ import Half from '../components/Half';
 import Section from '../components/Section';
 import Project from '../components/Project';
 
+import * as image1 from '../images/project1.jpg';
+import * as image2 from '../images/project2.jpg';
+import * as image3 from '../images/project3.jpg';
+
 class Portfolio extends React.Component {
     state = {
         index: 0
@@ -16,25 +20,29 @@ class Portfolio extends React.Component {
             index: 0,
             header: 'Strona internetowa Eurostall',
             body: 'Responsywna strona internetowa firmy oferującej projektowanie i realizację konstrukcji stalowych. Wykonana w 2018 roku w ramach praktyk studenckich. Zaktualizowana w 2019 roku. Jednym z wyzwań było napisanie arkuszy stylów oraz skryptów samodzielnie, bez użycia dodatkowych bibliotek.',
-            technologies: ['HTML 5', 'CSS 3', 'JavaScript']
+            technologies: ['HTML 5', 'CSS 3', 'JavaScript'],
+            image: (<img className="project-img" src={image1} alt="Eurostall" />)
         },
         {
             index: 1,
             header: 'Aplikacja mobilna do detekcji nut',
             body: 'Aplikacja mobilna na system Android z zaimplementowanymi algorytmami przetwarzania sygnałów, które są wykorzystane do określenia wysokości nut nagranego dźwięku. Zrealizowana w ramach pracy inżynierskiej.',
-            technologies: ['Java', 'Android SDK', 'Git']
+            technologies: ['Java', 'Android SDK', 'Git'],
+            image: (<img className="project-img" src={image2} alt="Eurostall" />)
         },
         {
             index: 2,
             header: 'Moje portfolio',
             body: 'Strona na której aktualnie się znajdujesz. Znajduje się tutaj spis najistotniejszych projektów.',
-            technologies: ['React', 'JavaScript', 'HTML 5', 'CSS 3', 'Git']
+            technologies: ['React', 'JavaScript', 'HTML 5', 'CSS 3', 'Git'],
+            image: (<img className="project-img" src={image3} alt="Eurostall" />)
         },
         {
             index: 3,
             header: 'Strona Klubu Miłośników Podróży',
             body: 'Project w trakcie rozwoju. Serwis internetowy wrocławskiego Klubu Miłośników Podróży. Serwis ma umożliwiać publikowanie aktualności i przyszłych spotkań uczestników, udostępnianie zdjęć z podróży, oznaczanie zwiedzonych miejsc na wirtualnym globusie.',
-            technologies: ['React', 'JavaScript', 'HTML 5', 'CSS 3', 'PHP', 'Bootstrap', 'WebGL Earth', 'Git']
+            technologies: ['React', 'JavaScript', 'HTML 5', 'CSS 3', 'PHP', 'Bootstrap', 'WebGL Earth', 'Git'],
+            image: (<img className="project-img" src={image1} alt="Eurostall" />)
         }
     ];
 
@@ -83,13 +91,20 @@ class Portfolio extends React.Component {
                 <div id="page" className="page">
                     <Row>
                         <Half>
-                            <div className="img-container">
-                                <img src="img/project1.jpg" />
+                            <div className="img-container" data-index={String(this.state.index)}>
+                                {this.projects.map(({ index, image }) => (
+                                    <CSSTransition
+                                        key={index}
+                                        in={this.state.index === index}
+                                        timeout={1000}
+                                        classNames="project-img"
+                                        unmountOnExit>
+                                        {image}
+                                    </CSSTransition>
+                                ))}
                             </div>
-                            <div className="img-container-shadow">
-                            </div>
-                            <div className="img-container-shadow2">
-                            </div>
+                            <div className="img-container-shadow" data-index={String(this.state.index)}></div>
+                            <div className="img-container-shadow2" data-index={String(this.state.index)}></div>
                         </Half>
                         <Half>
                             {this.projects.map(({ index, header, body, technologies }) => (

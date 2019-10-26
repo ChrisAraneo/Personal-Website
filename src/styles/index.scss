@@ -363,8 +363,53 @@ screen and (max-height: $breakpointY) {
     margin-top: 0;
     margin-left: -2rem;
     background-color: black;
+    transition-duration: .5s;
+}
+.img-container-shadow,
+.img-container-shadow2 {
+    transition-duration: .5s;
+}
+.img-container[data-index="0"],
+.img-container-shadow[data-index="1"],
+.img-container-shadow2[data-index="2"] {
     clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
 }
+.img-container[data-index="1"],
+.img-container-shadow[data-index="2"],
+.img-container-shadow2[data-index="3"]  {
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+}
+.img-container[data-index="2"],
+.img-container-shadow[data-index="3"],
+.img-container-shadow2[data-index="0"]  {
+    clip-path: polygon(0 0%, 100% 10%, 100% 100%, 0% 90%);
+}
+.img-container[data-index="3"],
+.img-container-shadow[data-index="0"],
+.img-container-shadow2[data-index="1"]  {
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%);
+}
+.project-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.project-img-enter {
+    opacity: 0;
+}
+.project-img-enter-active {
+    opacity: 1;
+    transition: opacity 500ms;
+}
+.project-img-exit {
+    opacity: 1;
+}
+.project-img-exit-active {
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
 .img-container-shadow {
     position: absolute;
     z-index: 1;
@@ -374,7 +419,7 @@ screen and (max-height: $breakpointY) {
     margin-top: 2rem;
     margin-left: -4rem;
     background-color: rgba(255,0,0,0.3);
-    clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+    transition-duration: .5s;
 }
 .img-container-shadow2 {
     position: absolute;
@@ -385,13 +430,9 @@ screen and (max-height: $breakpointY) {
     margin-top: -2rem;
     margin-left: 0rem;
     background-color: rgba(255,255,0,0.3);
-    clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+    transition-duration: .5s;
 }
-.img-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+
 @media only screen and (max-width: $breakpointX),
 screen and (max-height: $breakpointY) {
     .half {
