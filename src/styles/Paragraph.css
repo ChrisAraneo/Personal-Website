@@ -1,0 +1,16 @@
+.p {
+  font-size: 1.33rem;
+  line-height: 1.75rem;
+  text-align: left;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  color: white;
+  text-shadow: 0px 0px 0px #00cdff;
+}
+
+.p.blur {
+  color: #00cdff;
+}
+/*# sourceMappingURL=Paragraph.css.map */

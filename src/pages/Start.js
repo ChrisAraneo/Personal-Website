@@ -2,18 +2,20 @@ import React from 'react';
 import Page from '../components/Page';
 import Row from '../components/Row';
 import Half from '../components/Half';
+import Header from '../components/Header';
+import Subheader from '../components/Subheader';
 
 const Start = (props) => (
-    <Page>
+    <Page active={props.active}>
         <Row>
             <Half>
-                <header style={header}>
-                    <h1 style={h1}>Krzysztof Pająk</h1>
-                    <h2 style={h2}>Junior Web Developer</h2>
+                <header>
+                    <Header active={props.active}>Krzysztof Pająk</Header>
+                    <Subheader active={props.active}>{`\{ Strona w trakcie rozbudowy \}`}</Subheader>
                 </header>
             </Half>
             <Half>
-                <pre style={spider}>
+                <pre style={{ fontSize: '4vw', textAlign: 'center' }}>
                     {'//  \\\\'}<br />
                     {'_\\\\()//_'}<br />
                     {'/ //  \\\\ \\'}<br />
@@ -23,26 +25,5 @@ const Start = (props) => (
         </Row>
     </Page>
 );
-
-const spider = {
-    fontSize: '4vw',
-    textAlign: 'center'
-}
-
-const header = {
-    fontFamily: 'Titillium Web'
-}
-
-const h1 = {
-    fontSize: '4.5vw',
-    lineHeight: '5vw',
-    textAlign: 'right',
-}
-
-const h2 = {
-    fontSize: '2.5vw',
-    lineHeight: '2.5vw',
-    textAlign: 'right',
-}
 
 export default Start;

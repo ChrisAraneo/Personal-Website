@@ -1,0 +1,10 @@
+@import '../styles/colors.scss';
+
+.half {
+    box-sizing: border-box;
+    padding: 4rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

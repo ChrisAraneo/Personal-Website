@@ -1,0 +1,16 @@
+@import './colors.scss';
+
+.p {
+    font-size: 1.33rem;
+    line-height: 1.75rem;
+    text-align: left;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    color: white;
+    text-shadow:
+    0px 0px 0px $primary;
+}
+
+.p.blur {
+    color: $primary;
+}

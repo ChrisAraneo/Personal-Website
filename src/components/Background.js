@@ -1,22 +1,10 @@
 import React from 'react';
-
-import Wobble from '../images/wobble.png';
-import colors from '../styles/colors';
+import '../styles/Background.css'
 
 const Background = (props) => (
-    <div className="background" style={style}>
+    <div className="background">
         {props.children}
     </div>
 );
-
-const style = {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    zIndex: -1,
-    width: '100%',
-    minHeight: '100vh',
-    backgroundColor: colors.dark
-};
 
 export default Background;

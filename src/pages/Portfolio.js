@@ -2,10 +2,10 @@ import React from 'react';
 import Page from '../components/Page';
 import Row from '../components/Row';
 import Half from '../components/Half';
-import Header from '../components/Header';
+import Header from '../components/Header'
 import Paragraph from '../components/Paragraph'
 
-const About = (props) => (
+const Portfolio = (props) => (
     <Page active={props.active}>
         <Row>
             <Half>
@@ -13,7 +13,7 @@ const About = (props) => (
                     <Header active={props.active}>O mnie</Header>
                 </header>
                 <article>
-                    <Paragraph active={props.active}>Mam na imię Krzysiek i jestem absolwentem inżynierskich studiów informatycznych. Aspiruję na zostanie Web Developerem. Moim celem jest tworzenie wydajnych aplikacji webowych i kreatywnych stron internetowych. Posiadam również doświadczenie w programowaniu aplikacji mobilnych na system Android. Do moich zainteresowań i hobby zawsze należało programowanie, muzyka elektroniczna, sporty wodne, podróże.</Paragraph>
+                    <p style={p}>Mam na imię Krzysiek i jestem absolwentem inżynierskich studiów informatycznych. Aspiruję na zostanie Web Developerem. Moim celem jest tworzenie wydajnych aplikacji webowych i kreatywnych stron internetowych. Posiadam również doświadczenie w programowaniu aplikacji mobilnych na system Android. Do moich zainteresowań i hobby zawsze należało programowanie, muzyka elektroniczna, sporty wodne, podróże.</p>
                 </article>
             </Half>
             <Half>
@@ -22,7 +22,9 @@ const About = (props) => (
                         <Header active={props.active}>Umiejętności</Header>
                     </header>
                     <article>
-                        <p style={p}>Mam na imię Krzysiek i jestem absolwentem inżynierskich studiów informatycznych. Aspiruję na zostanie Web Developerem. Moim celem jest tworzenie wydajnych aplikacji webowych i kreatywnych stron internetowych. Posiadam również doświadczenie w programowaniu aplikacji mobilnych na system Android. Do moich zainteresowań i hobby zawsze należało programowanie, muzyka elektroniczna, sporty wodne, podróże.</p>
+                        <Paragraph active={props.active}>
+                            Mam na imię Krzysiek i jestem absolwentem inżynierskich studiów informatycznych. Aspiruję na zostanie Web Developerem. Moim celem jest tworzenie wydajnych aplikacji webowych i kreatywnych stron internetowych. Posiadam również doświadczenie w programowaniu aplikacji mobilnych na system Android. Do moich zainteresowań i hobby zawsze należało programowanie, muzyka elektroniczna, sporty wodne, podróże.
+                        </Paragraph>
                     </article>
                 </div>
                 <div>
@@ -60,4 +62,4 @@ const h2 = {
     textAlign: 'right',
 }
 
-export default About;
+export default Portfolio;

@@ -1,16 +1,8 @@
 import React from 'react';
+import '../styles/Half.css';
 
 const Half = (props) => (
-    <div className="half" style={style}>{props.children}</div>
+    <div className="half">{props.children}</div>
 );
-
-const style = {
-    boxSizing: 'border-box',
-    padding: '4rem',
-    width: '50%',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center'
-}
 
 export default Half;

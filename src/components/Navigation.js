@@ -1,26 +1,16 @@
 import React from 'react';
+import '../styles/Navigation.css'
 
 import NavLink from './NavLink';
-import colors from '../styles/colors';
 
 const Navigation = (props) => (
-    <nav className="navigation" style={style}>
+    <nav className="navigation">
         {
             props.routes.map(({ index, name, hover }) => (
-                <NavLink active={props.active == index ? true : false} hover={hover}>{name}</NavLink>
+                <NavLink key={index} active={props.active == index ? true : false} hover={hover}>{name}</NavLink>
             ))
         }
     </nav>
 );
-
-const style = {
-    boxSizing: 'border-box',
-    position: 'absolute',
-    display: 'flex',
-    justifyItems: 'flex-start',
-    borderBottom: '1px solid black',
-    borderRight: '1px solid black',
-    borderColor: colors.primary
-}
 
 export default Navigation;

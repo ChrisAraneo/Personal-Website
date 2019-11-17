@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,GAAG,CAAC;EACA,QAAQ,EAAE,UAAU;EACpB,SAAS,EAAE,MAAM;EACjB,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM;EAClB,mBAAmB,EAAE,GAAG;EACxB,WAAW,EAAE,GAAG,CAAC,GAAG,CAAC,GAAG,CCRlB,OAAc,EDQe,GAAG,CAAC,GAAG,CAAC,GAAG,CCRxC,OAAc;CDSvB;;AAED,AAAA,GAAG,AAAA,KAAK,CAAC;EACL,KAAK,ECZC,OAAc;EDapB,WAAW,EAAE,wCAAwC;CACxD",
+    "sources": [
+        "Subheader.scss",
+        "colors.scss"
+    ],
+    "names": [],
+    "file": "Subheader.css"
+}

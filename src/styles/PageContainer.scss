@@ -1,0 +1,20 @@
+@import './colors.scss';
+
+.page-container {
+    font-family: 'Titillium Web';
+    box-sizing: 'border-box';
+    height: calc(100vh - 10rem);
+    background-color: transparent;
+    padding: 5rem;
+    display: flex;
+    z-index: 0;
+}
+
+.page-panel {
+    box-sizing: border-box;
+    width: calc(100%);
+    background-color: $dark;
+    border: 1px solid black;
+    border-color: $primary;
+    overflow: hidden;
+}

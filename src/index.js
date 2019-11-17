@@ -4,12 +4,13 @@ import WebFont from 'webfontloader';
 
 /* COMPONENTS */
 import Background from './components/Background'
-import PageContainer from './components/PageContainer'
 import Navigation from './components/Navigation'
+import PageContainer from './components/PageContainer'
 
 /* PAGES */
 import Start from './pages/Start'
 import About from './pages/About'
+import Portfolio from './pages/Portfolio'
 
 WebFont.load({
     google: {
@@ -20,36 +21,57 @@ WebFont.load({
 class App extends React.Component {
 
     state = {
-        subpage: 0
+        active: 0
     }
 
     routes = [
         {
             index: 0,
             name: 'Start',
-            hover: (() => this.setState({ subpage: 0 })),
+            hover: (() => { this.setState({ active: 0 }) }),
             page: <Start />
         },
         {
             index: 1,
             name: 'O mnie',
-            hover: (() => this.setState({ subpage: 1 })),
+            hover: (() => { this.setState({ active: 1 }) }),
             page: <About />
         },
         {
             index: 2,
             name: 'Portfolio',
-            hover: (() => this.setState({ subpage: 2 })),
-            page: null
+            hover: (() => { this.setState({ active: 2 }) }),
+            page: <Portfolio />
         },
     ]
 
     render() {
+        let top = 0;
+        switch (this.state.active) {
+            case 0:
+                top = '0';
+                break;
+            case 1:
+                top = '-100%';
+                break;
+            case 2:
+                top = '-200%';
+                break;
+        }
+        console.log(this.state.active)
         return (
             <Background>
+                <Navigation routes={this.routes} active={this.state.active} />
                 <PageContainer>
-                    <Navigation routes={this.routes} active={this.state.subpage} />
-                    {this.routes[this.state.subpage].page}
+                    <div className="slides" style={{
+                        position: 'relative',
+                        transitionDuration: '.3s',
+                        top: top
+                    }}>
+                        <Start active={this.state.active === 0} />
+                        <About active={this.state.active === 1} />
+                        <Portfolio active={this.state.active === 2} />
+                    </div>
                 </PageContainer>
             </Background>
         );

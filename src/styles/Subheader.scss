@@ -1,0 +1,15 @@
+@import './colors.scss';
+
+.h2 {
+    position: 'relative';
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    transition-duration: .4s;
+    text-shadow: 0px 0px 7px $primary, 0px 0px 0px $primary;
+}
+
+.h2.blur {
+    color: $primary;
+    text-shadow: 0px 5px 32px cyan, 0px -5px 32px magenta;
+}

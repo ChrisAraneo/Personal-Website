@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,EAAE,CAAC;EACC,SAAS,EAAE,OAAO;EAClB,WAAW,EAAE,OAAO;EACpB,UAAU,EAAE,IAAI;EAChB,mBAAmB,EAAE,EAAE;EACvB,0BAA0B,EAAE,MAAM;EAClC,KAAK,EAAE,KAAK;EACZ,WAAW,EACX,GAAG,CAAC,GAAG,CAAC,GAAG,CCVL,OAAc;CDWvB;;AAED,AAAA,EAAE,AAAA,KAAK,CAAC;EACJ,KAAK,ECdC,OAAc;CDevB",
+    "sources": [
+        "Paragraph.scss",
+        "colors.scss"
+    ],
+    "names": [],
+    "file": "Paragraph.css"
+}

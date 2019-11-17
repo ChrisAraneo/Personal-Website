@@ -1,12 +1,8 @@
 import React from 'react';
+import '../styles/Row.css'
 
 const Row = (props) => (
-    <div className="row" style={style}>{props.children}</div>
+    <div className="row">{props.children}</div>
 );
-
-const style = {
-    display: 'flex',
-    flexDirection: 'row',
-}
 
 export default Row;

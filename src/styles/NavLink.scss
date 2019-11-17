@@ -1,0 +1,25 @@
+@import '../styles/colors.scss';
+
+.nav-link {
+    font-family: 'Titillium Web';
+    box-sizing: border-box;
+    background-color: $dark;
+    color: white;
+    padding: 1rem 2.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.25rem;
+    width: 33.3333%;
+    min-width: 4rem;
+    border-bottom: 1px solid $primary;
+}
+
+.nav-link:last-of-type {
+    border-right: 1px solid $primary;
+}
+
+.nav-link.active {
+    background-color: $primary;
+    color: $dark;
+}

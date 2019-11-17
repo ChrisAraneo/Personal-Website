@@ -1,0 +1,19 @@
+@import '../styles/colors.scss';
+
+h1 {
+    position: relative;
+    font-size: 4rem;
+    line-height: 4.5rem;
+    text-align: center;
+    color: white;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    text-shadow:
+    0px 0px 7px $primary;
+}
+
+h1.blur {
+    color: $primary;
+    text-shadow:
+    0px 0px 15px $primary;
+}

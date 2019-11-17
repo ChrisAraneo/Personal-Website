@@ -1,0 +1,18 @@
+h1 {
+  position: relative;
+  font-size: 4rem;
+  line-height: 4.5rem;
+  text-align: center;
+  color: white;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  text-shadow: 0px 0px 7px #00cdff;
+}
+
+h1.blur {
+  color: #00cdff;
+  text-shadow: 0px 0px 15px #00cdff;
+}
+/*# sourceMappingURL=Header.css.map */
