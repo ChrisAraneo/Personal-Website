@@ -1,5 +1,5 @@
 .spider-container {
-  width: 100%;
+  width: 400px;
   min-height: 400px;
   padding: 2rem;
   display: -webkit-box;
@@ -18,6 +18,8 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
 }
 
 .spider {

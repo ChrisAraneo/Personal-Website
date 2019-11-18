@@ -1,7 +1,7 @@
 @import './colors.scss';
 
 .spider-container {
-    width: 100%;
+    width: 400px;
     min-height: 400px;
     padding: 2rem;
     display: flex;
@@ -9,6 +9,7 @@
     justify-content: center;
     perspective: 40px;
     user-select: none;
+    clip-path: circle(50% at 50% 50%);
 }
 
 .spider {

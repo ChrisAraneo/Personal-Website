@@ -27,7 +27,7 @@ class Spider extends React.Component {
         var rect = spider.getBoundingClientRect();
         // mouse.updatePosition(event);
         const max = 2;
-        let tX = (2 * (rect.x - mouse_x) / spider.offsetWidth).toFixed(2);
+        let tX = (-2 * (rect.x - mouse_x) / spider.offsetWidth).toFixed(2);
         let tY = (2 * (rect.y - mouse_y) / spider.offsetHeight).toFixed(2);
         if (Math.abs(tX) > max) {
             tX = Math.sign(tX) * max;
@@ -51,7 +51,7 @@ class Spider extends React.Component {
     render() {
         return (
             <div className="spider-container"
-                style={{ backgroundImage: `url(${this.props.image})`, backgroundSize: 'contain', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+                style={{ backgroundImage: `url(${this.props.image})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
                 <pre id="spider" className="spider">
                     {'//  \\\\'}<br />
                     {'_\\\\()//_'}<br />
