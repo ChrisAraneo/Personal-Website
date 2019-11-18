@@ -18,8 +18,8 @@ class Header extends React.Component {
         const show = (this.props.active && !this.state.isActive);
         const delay = (this.props.delay ? String(this.props.delay) : '0')
         return (
-            <header className={`header left`}>
-                <h1 className={`h1 ${show ? `h1-in-${delay}` : `h1-out-${delay}`}`}>{this.props.children}</h1>
+            <header className={`header`}>
+                <h1 className={`h1 ${show ? `h1-in-${delay}` : `h1-out-${delay}`}`} style={{ ...this.props.style }}>{this.props.children}</h1>
             </header>
         );
     }

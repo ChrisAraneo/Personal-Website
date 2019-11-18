@@ -1,15 +1,122 @@
 .h2 {
-  position: 'relative';
+  position: relative;
   font-size: 2.5rem;
   line-height: 2.5rem;
-  text-align: center;
+  text-align: left;
   -webkit-transition-duration: .4s;
           transition-duration: .4s;
-  text-shadow: 0px 0px 7px #00cdff, 0px 0px 0px #00cdff;
+  color: white;
+  -webkit-transform: translateY(-7rem);
+          transform: translateY(-7rem);
 }
 
-.h2.blur {
-  color: #00cdff;
-  text-shadow: 0px 5px 32px cyan, 0px -5px 32px magenta;
+.h2-in-0 {
+  -webkit-animation-name: h2-in;
+          animation-name: h2-in;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.h2-in-1 {
+  -webkit-animation-name: h2-in;
+          animation-name: h2-in;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.h2-in-2 {
+  -webkit-animation-name: h2-in;
+          animation-name: h2-in;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes h2-in {
+  from {
+    -webkit-transform: translateY(-7rem);
+            transform: translateY(-7rem);
+  }
+  to {
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+}
+
+@keyframes h2-in {
+  from {
+    -webkit-transform: translateY(-7rem);
+            transform: translateY(-7rem);
+  }
+  to {
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+}
+
+.h2-out-0 {
+  -webkit-animation-name: h2-out;
+          animation-name: h2-out;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+.h2-out-1 {
+  -webkit-animation-name: h2-out;
+          animation-name: h2-out;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+.h2-out-2 {
+  -webkit-animation-name: h2-out;
+          animation-name: h2-out;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+@-webkit-keyframes h2-out {
+  from {
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+  to {
+    -webkit-transform: translateY(-7rem);
+            transform: translateY(-7rem);
+  }
+}
+
+@keyframes h2-out {
+  from {
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+  to {
+    -webkit-transform: translateY(-7rem);
+            transform: translateY(-7rem);
+  }
 }
 /*# sourceMappingURL=Subheader.css.map */

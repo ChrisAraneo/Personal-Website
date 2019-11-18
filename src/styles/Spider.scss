@@ -1,0 +1,24 @@
+@import './colors.scss';
+
+.spider-container {
+    width: 100%;
+    min-height: 400px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    perspective: 40px;
+    user-select: none;
+}
+
+.spider {
+    position: relative;
+    width: 100%;
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    text-shadow:
+    0px 0px 7px $primary;
+    transition-duration: .1s;
+    user-select: none;
+}

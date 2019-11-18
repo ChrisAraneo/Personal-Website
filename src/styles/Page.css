@@ -11,15 +11,16 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
-  height: calc(100vh - 9rem);
+  height: 100vh;
   color: white;
   overflow-x: hidden;
   overflow-y: auto;
   padding: 2rem;
+  padding-top: 4rem;
 }
 
 .page.active {
@@ -34,10 +35,10 @@
 .page:not(.active) {
   -webkit-animation-name: page-out;
           animation-name: page-out;
-  -webkit-animation-delay: .8s;
-          animation-delay: .8s;
-  -webkit-animation-duration: .2s;
-          animation-duration: .2s;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
 }
 
 @-webkit-keyframes page-in {

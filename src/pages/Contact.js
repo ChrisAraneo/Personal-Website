@@ -5,7 +5,7 @@ import Half from '../components/Half';
 import Header from '../components/Header'
 import Paragraph from '../components/Paragraph'
 
-const Portfolio = (props) => (
+const Contact = (props) => (
     <Page active={props.active} style={{ justifyContent: 'center' }}>
         <Row>
             <Half style={{ justifyContent: 'center' }}>
@@ -17,4 +17,4 @@ const Portfolio = (props) => (
     </Page >
 );
 
-export default Portfolio;
+export default Contact;

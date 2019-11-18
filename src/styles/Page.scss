@@ -7,13 +7,14 @@
     left: 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     width: 100%;
-    height: calc(100vh - 9rem);
+    height: 100vh;
     color: white;
     overflow-x: hidden;
     overflow-y: auto;
     padding: 2rem;
+    padding-top: 4rem;
 }
 
 .page.active {
@@ -24,8 +25,8 @@
 
 .page:not(.active) {
     animation-name: page-out;
-    animation-delay: .8s;
-    animation-duration: .2s;
+    animation-delay: .5s;
+    animation-duration: .5s;
 }
 
 @keyframes page-in {

@@ -3,12 +3,12 @@
 .page-container {
     font-family: 'Titillium Web';
     box-sizing: 'border-box';
-    height: calc(100vh - 5rem);
+    height: 100vh;
     background-color: transparent;
-    padding: 2.5rem;
     display: flex;
+    justify-content: center;
     z-index: 0;
-    max-width: 1280px;
+    max-width: 100%;
     margin: auto auto;
 }
 
@@ -16,7 +16,6 @@
     box-sizing: border-box;
     width: calc(100%);
     background-color: $dark;
-    border: 1px solid black;
-    border-color: $primary;
     overflow: hidden;
+    max-width: 1200px;
 }

@@ -4,23 +4,19 @@ import Row from '../components/Row';
 import Half from '../components/Half';
 import Header from '../components/Header';
 import Subheader from '../components/Subheader';
+import Spider from '../components/Spider';
 
 const Start = (props) => (
     <Page active={props.active} style={{ justifyContent: 'center' }}>
         <Row>
-            <Half>
+            <Half style={{ justifyContent: 'center' }}>
                 <header>
-                    <Header active={props.active}>Krzysztof Pająk</Header>
-                    <Subheader active={props.active}>{`\{ Strona w trakcie rozbudowy \}`}</Subheader>
+                    <Header active={props.active} style={{ textAlign: 'right' }}>Krzysztof Pająk</Header>
+                    <Subheader active={props.active} delay={1} style={{ textAlign: 'right' }}>Junior Web Developer</Subheader>
                 </header>
             </Half>
             <Half>
-                <pre style={{ fontSize: '4vw', textAlign: 'center' }}>
-                    {'//  \\\\'}<br />
-                    {'_\\\\()//_'}<br />
-                    {'/ //  \\\\ \\'}<br />
-                    {'| \\__/ |'}<br />
-                </pre>
+                <Spider image={props.image} />
             </Half>
         </Row>
     </Page >

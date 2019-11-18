@@ -8,19 +8,19 @@
     color: white;
     text-transform: uppercase;
     text-align: center;
-    cursor: pointer;
+    
     font-size: 1.25rem;
-    width: 33.3333%;
-    min-width: 4rem;
-    border-bottom: 1px solid $primary;
+    padding: 0 2rem;
+    min-width: 12.5%;
     user-select: none;
+    transition-duration: .3s;
 }
 
-.nav-link:last-of-type {
-    border-right: 1px solid $primary;
+.nav-link:not(.active):hover {
+    background-color: darken($primary, 30%);
+    cursor: pointer;
 }
 
 .nav-link.active {
-    background-color: $primary;
-    color: $dark;
+    color: lighten($primary, 20%);
 }

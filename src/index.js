@@ -11,6 +11,11 @@ import PageContainer from './components/PageContainer'
 import Start from './pages/Start'
 import About from './pages/About'
 import Portfolio from './pages/Portfolio'
+import Contact from './pages/Contact'
+
+/* IMAGES */
+import wobble from './images/wobble.png';
+import wobble2 from './images/wobble-2.png';
 
 WebFont.load({
     google: {
@@ -44,6 +49,12 @@ class App extends React.Component {
             click: (() => { this.onNavLinkClick(2) }),
             page: <Portfolio />
         },
+        {
+            index: 3,
+            name: 'Kontakt',
+            click: (() => { this.onNavLinkClick(3) }),
+            page: <Contact />
+        },
     ]
 
     onNavLinkClick(index) {
@@ -62,26 +73,30 @@ class App extends React.Component {
                 top = '0';
                 break;
             case 1:
-                top = 'calc(-100% + 4rem)';
+                top = '-100%';
                 break;
             case 2:
-                top = 'calc(-200% + 4rem)';
+                top = '-200%';
+                break;
+            case 3:
+                top = '-300%';
                 break;
         }
         console.log(this.state.active)
         return (
             <Background>
+                <Navigation routes={this.routes} active={this.state.active} />
                 <PageContainer>
-                    <Navigation routes={this.routes} active={this.state.active} />
                     <div className="slides" style={{
                         position: 'relative',
                         transitionDuration: '0s',
                         transitionDelay: '1s',
                         top: top
                     }}>
-                        <Start active={this.state.active === 0} />
-                        <About active={this.state.active === 1} />
+                        <Start active={this.state.active === 0} image={wobble} />
+                        <About active={this.state.active === 1} image={wobble2} />
                         <Portfolio active={this.state.active === 2} />
+                        <Contact active={this.state.active === 3} />
                     </div>
                 </PageContainer>
             </Background>
