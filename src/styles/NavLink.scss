@@ -4,8 +4,8 @@
     font-family: 'Titillium Web';
     box-sizing: border-box;
     background-color: $dark;
+    line-height: 4rem;
     color: white;
-    padding: 1rem 2.5rem;
     text-transform: uppercase;
     text-align: center;
     cursor: pointer;
@@ -13,6 +13,7 @@
     width: 33.3333%;
     min-width: 4rem;
     border-bottom: 1px solid $primary;
+    user-select: none;
 }
 
 .nav-link:last-of-type {

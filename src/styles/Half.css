@@ -1,7 +1,6 @@
 .half {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 4rem;
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10,8 +9,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 2rem;
 }
 /*# sourceMappingURL=Half.css.map */

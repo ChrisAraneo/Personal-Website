@@ -1,18 +1,129 @@
-h1 {
-  position: relative;
-  font-size: 4rem;
-  line-height: 4.5rem;
-  text-align: center;
-  color: white;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-  text-shadow: 0px 0px 7px #00cdff;
+.header {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  padding: 0;
+  margin-bottom: 2rem;
+  overflow-wrap: unset;
 }
 
-h1.blur {
-  color: #00cdff;
-  text-shadow: 0px 0px 15px #00cdff;
+.h1 {
+  position: relative;
+  font-size: 4rem;
+  line-height: 5rem;
+  text-align: left;
+  color: white;
+  -webkit-transform: translateY(7rem);
+          transform: translateY(7rem);
+}
+
+.h1-in-0 {
+  -webkit-animation-name: h1-in;
+          animation-name: h1-in;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.h1-in-1 {
+  -webkit-animation-name: h1-in;
+          animation-name: h1-in;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.h1-in-2 {
+  -webkit-animation-name: h1-in;
+          animation-name: h1-in;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes h1-in {
+  from {
+    -webkit-transform: translateY(7rem);
+            transform: translateY(7rem);
+  }
+  to {
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+}
+
+@keyframes h1-in {
+  from {
+    -webkit-transform: translateY(7rem);
+            transform: translateY(7rem);
+  }
+  to {
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+}
+
+.h1-out-0 {
+  -webkit-animation-name: h1-out;
+          animation-name: h1-out;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+.h1-out-1 {
+  -webkit-animation-name: h1-out;
+          animation-name: h1-out;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+.h1-out-2 {
+  -webkit-animation-name: h1-out;
+          animation-name: h1-out;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+@-webkit-keyframes h1-out {
+  from {
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+  to {
+    -webkit-transform: translateY(7rem);
+            transform: translateY(7rem);
+  }
+}
+
+@keyframes h1-out {
+  from {
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+  to {
+    -webkit-transform: translateY(7rem);
+            transform: translateY(7rem);
+  }
 }
 /*# sourceMappingURL=Header.css.map */

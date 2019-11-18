@@ -1,16 +1,74 @@
 @import './colors.scss';
 
 .p {
-    font-size: 1.33rem;
-    line-height: 1.75rem;
+    font-size: 1.3rem;
+    line-height: 2rem;
     text-align: left;
     transition-duration: 1s;
     transition-timing-function: linear;
     color: white;
-    text-shadow:
-    0px 0px 0px $primary;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: scale(0.9);
 }
 
-.p.blur {
-    color: $primary;
+.p-in-0 {
+    animation-name: p-in;
+    animation-duration: .3s;
+    animation-delay: 1.2s;
+    animation-fill-mode: forwards;
+}
+.p-in-1 {
+    animation-name: p-in;
+    animation-duration: .3s;
+    animation-delay: 1.4s;
+    animation-fill-mode: forwards;
+}
+.p-in-2 {
+    animation-name: p-in;
+    animation-duration: .3s;
+    animation-delay: 1.6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes p-in {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.p-out-0 {
+    animation-name: p-out;
+    animation-duration: .3s;
+    animation-delay: 0.2s;
+    animation-fill-mode: backwards;
+}
+.p-out-1 {
+    animation-name: p-out;
+    animation-duration: .3s;
+    animation-delay: 0.4s;
+    animation-fill-mode: backwards;
+}
+.p-out-2 {
+    animation-name: p-out;
+    animation-duration: .3s;
+    animation-delay: 0.6s;
+    animation-fill-mode: backwards;
+}
+
+
+@keyframes p-out {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.9);
+    }
 }

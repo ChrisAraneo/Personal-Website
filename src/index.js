@@ -21,29 +21,39 @@ WebFont.load({
 class App extends React.Component {
 
     state = {
-        active: 0
+        active: 0,
+        lastClick: 0
     }
 
     routes = [
         {
             index: 0,
             name: 'Start',
-            hover: (() => { this.setState({ active: 0 }) }),
+            click: (() => { this.onNavLinkClick(0) }),
             page: <Start />
         },
         {
             index: 1,
             name: 'O mnie',
-            hover: (() => { this.setState({ active: 1 }) }),
+            click: (() => { this.onNavLinkClick(1) }),
             page: <About />
         },
         {
             index: 2,
             name: 'Portfolio',
-            hover: (() => { this.setState({ active: 2 }) }),
+            click: (() => { this.onNavLinkClick(2) }),
             page: <Portfolio />
         },
     ]
+
+    onNavLinkClick(index) {
+        if (this.state.active != index) {
+            const delta = Date.now() - this.state.lastClick;
+            if (delta >= 2000) {
+                this.setState({ active: index, lastClick: Date.now() });
+            }
+        }
+    }
 
     render() {
         let top = 0;
@@ -52,20 +62,21 @@ class App extends React.Component {
                 top = '0';
                 break;
             case 1:
-                top = '-100%';
+                top = 'calc(-100% + 4rem)';
                 break;
             case 2:
-                top = '-200%';
+                top = 'calc(-200% + 4rem)';
                 break;
         }
         console.log(this.state.active)
         return (
             <Background>
-                <Navigation routes={this.routes} active={this.state.active} />
                 <PageContainer>
+                    <Navigation routes={this.routes} active={this.state.active} />
                     <div className="slides" style={{
                         position: 'relative',
-                        transitionDuration: '.3s',
+                        transitionDuration: '0s',
+                        transitionDelay: '1s',
                         top: top
                     }}>
                         <Start active={this.state.active === 0} />

@@ -3,7 +3,7 @@ import '../styles/NavLink.css'
 
 const NavLink = (props) => (
     <div className={`nav-link ${props.active ? 'active' : ''}`}
-        onMouseEnter={() => props.hover()}
+        onClick={() => props.click()}
     >{props.children}</div>
 );
 

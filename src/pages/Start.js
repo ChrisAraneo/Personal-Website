@@ -6,7 +6,7 @@ import Header from '../components/Header';
 import Subheader from '../components/Subheader';
 
 const Start = (props) => (
-    <Page active={props.active}>
+    <Page active={props.active} style={{ justifyContent: 'center' }}>
         <Row>
             <Half>
                 <header>
@@ -23,7 +23,7 @@ const Start = (props) => (
                 </pre>
             </Half>
         </Row>
-    </Page>
+    </Page >
 );
 
 export default Start;

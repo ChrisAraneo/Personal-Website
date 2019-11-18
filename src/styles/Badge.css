@@ -1,0 +1,12 @@
+.badge {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  line-height: 1.6rem;
+  font-size: 1rem;
+  padding: .1rem .6rem;
+  margin: .2rem .2rem;
+  border: 1px solid white;
+  border-radius: .4rem;
+}
+/*# sourceMappingURL=Badge.css.map */
