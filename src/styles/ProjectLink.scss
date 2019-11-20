@@ -1,0 +1,29 @@
+@import '../styles/colors.scss';
+
+.project-link {
+    font-family: 'Titillium Web';
+    box-sizing: border-box;
+    background-color: transparent;
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 2rem;
+    transition-duration: 0.5s;
+    height: 100%
+}
+
+.project-link:hover {
+    background-color: darken($primary, 30%);
+    cursor: pointer;
+}
+
+.project-link.active {
+    color: lighten($primary, 20%);
+}
+
+.project-link .header:last-of-type {
+    margin-bottom: 0;
+}
+
+.project-link .h2 {
+    color: $secondary;
+}

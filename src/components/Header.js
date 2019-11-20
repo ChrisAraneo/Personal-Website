@@ -5,13 +5,7 @@ import '../styles/Header.css';
 class Header extends React.Component {
 
     state = {
-        thisNode: null,
         isActive: false
-    }
-
-    componentDidMount() {
-        this.setState({ thisNode: ReactDOM.findDOMNode(this) });
-        console.log(ReactDOM.findDOMNode(this));
     }
 
     render() {

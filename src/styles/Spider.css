@@ -12,28 +12,88 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-perspective: 40px;
-          perspective: 40px;
+  -webkit-perspective: 60px;
+          perspective: 60px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   -webkit-clip-path: circle(50% at 50% 50%);
           clip-path: circle(50% at 50% 50%);
+  opacity: 0;
 }
 
 .spider {
   position: relative;
   width: 100%;
   font-size: 4rem;
+  font-weight: bold;
   color: white;
   text-align: center;
-  text-shadow: 0px 0px 7px #00cdff;
+  text-shadow: 2px 0px 1px black, -2px 0px 1px #00cdff, 0px 2px 1px black, 0px -2px 1px #00cdff, 0px 0px 5px black;
   -webkit-transition-duration: .1s;
           transition-duration: .1s;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+.spider-in-0 {
+  -webkit-animation-name: spider-in;
+          animation-name: spider-in;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes spider-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes spider-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.spider-out-0 {
+  -webkit-animation-name: spider-out;
+          animation-name: spider-out;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+@-webkit-keyframes spider-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes spider-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=Spider.css.map */

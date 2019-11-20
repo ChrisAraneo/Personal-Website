@@ -16,7 +16,7 @@ const Start = (props) => (
                 </header>
             </Half>
             <Half>
-                <Spider image={props.image} />
+                <Spider active={props.active} image={props.image} />
             </Half>
         </Row>
     </Page >

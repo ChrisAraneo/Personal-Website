@@ -4,6 +4,7 @@ import '../styles/Spider.css';
 class Spider extends React.Component {
 
     state = {
+        isActive: false,
         spiderElement: null,
         spiderContainer: null,
     }
@@ -25,7 +26,7 @@ class Spider extends React.Component {
         const mouse_y = e.clientY;
         const spider = this.state.spiderElement;
         var rect = spider.getBoundingClientRect();
-        // mouse.updatePosition(event);
+
         const max = 2;
         let tX = (-2 * (rect.x - mouse_x) / spider.offsetWidth).toFixed(2);
         let tY = (2 * (rect.y - mouse_y) / spider.offsetHeight).toFixed(2);
@@ -49,9 +50,11 @@ class Spider extends React.Component {
     };
 
     render() {
+        const show = (this.props.active && !this.state.isActive);
+        const delay = (this.props.delay ? String(this.props.delay) : '0')
         return (
-            <div className="spider-container"
-                style={{ backgroundImage: `url(${this.props.image})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+            <div className={`spider-container ${show ? `spider-in-${delay}` : `spider-out-${delay}`}`}
+                style={{ backgroundImage: `url(${this.props.image ? this.props.image : ''})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
                 <pre id="spider" className="spider">
                     {'//  \\\\'}<br />
                     {'_\\\\()//_'}<br />

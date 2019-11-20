@@ -1,6 +1,6 @@
 .p {
-  font-size: 1.3rem;
-  line-height: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
   text-align: left;
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
@@ -11,6 +11,10 @@
   opacity: 0;
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+}
+
+.p:last-of-type {
+  margin-bottom: 0rem;
 }
 
 .p-in-0 {

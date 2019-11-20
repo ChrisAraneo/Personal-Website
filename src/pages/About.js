@@ -10,14 +10,14 @@ import Badge from '../components/Badge';
 const About = (props) => (
     <Page active={props.active}>
         <Row>
-            <Half style={{ backgroundImage: `url(${props.image})`, backgroundSize: 'cover' }}>
+            <Half style={{ backgroundImage: `url(${props.image ? props.image : ''})`, backgroundSize: 'cover' }}>
                 <Header active={props.active} delay={0}>O mnie</Header>
                 <article>
                     <Paragraph active={props.active} delay={0}>Mam na imię Krzysiek i jestem absolwentem inżynierskich studiów informatycznych. Aspiruję na zostanie Web Developerem. Moim celem jest tworzenie wydajnych aplikacji webowych i kreatywnych stron internetowych. Posiadam również doświadczenie w programowaniu aplikacji mobilnych na system Android. Do moich zainteresowań i hobby zawsze należało programowanie, muzyka elektroniczna, sporty wodne, podróże.</Paragraph>
                 </article>
             </Half>
             <Half>
-                <div>
+                <div style={{ marginBottom: '2rem' }}>
                     <Header active={props.active} delay={1}>Umiejętności</Header>
                     <article>
                         <Paragraph active={props.active} delay={1}>

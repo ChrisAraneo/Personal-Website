@@ -6,6 +6,7 @@
     padding: 0;
     margin-bottom: 2rem;
     overflow-wrap: unset;
+    text-transform: initial;
 }
 
 .h1 {
@@ -39,10 +40,12 @@
 
 @keyframes h1-in {
     from {
-        transform: translateY(7rem);
+        transform: translateY(14rem);
+        opacity: 0;
     }
     to {
         transform: translateY(0rem);
+        opacity: 1;
     }
 }
 
@@ -69,8 +72,10 @@
 @keyframes h1-out {
     from {
         transform: translateY(0rem);
+        opacity: 1;
     }
     to {
-        transform: translateY(7rem);
+        transform: translateY(14rem);
+        opacity: 0;
     }
 }
