@@ -7,7 +7,7 @@ import Subheader from '../components/Subheader';
 import Spider from '../components/Spider';
 
 const Start = (props) => (
-    <Page active={props.active} style={{ justifyContent: 'center' }}>
+    <Page active={props.active}>
         <Row>
             <Half style={{ justifyContent: 'center' }}>
                 <header>

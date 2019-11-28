@@ -1,0 +1,27 @@
+.link {
+  font-family: 'Titillium Web';
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline;
+  background-color: transparent;
+  line-height: 4rem;
+  color: #bfbfbf;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.25rem;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: white;
+  cursor: pointer;
+}
+/*# sourceMappingURL=Link.css.map */

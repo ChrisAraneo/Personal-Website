@@ -7,30 +7,22 @@ import Paragraph from '../components/Paragraph'
 import ProjectLink from '../components/ProjectLink'
 
 const Portfolio = (props) => (
-    <Page active={props.active} style={{ justifyContent: 'center' }}>
-        <div style={{ backgroundImage: `url(${props.image ? props.image : ''})`, backgroundSize: 'cover' }}>
-            <Row>
-                <Half>
-                    <ProjectLink id='01' title="Strona internetowa firmy"
-                        active={props.active} delay={0} click={() => props.linkClick(4)}
-                    />
-                </Half>
-                <Half>
-                    <ProjectLink id='02' title="Aplikacja mobilna do detekcji wysokości nut"
-                        active={props.active} delay={1} click={() => props.linkClick(5)} />
-                </Half>
-            </Row>
-            <Row>
-                <Half>
-                    <ProjectLink id='03' title="Moje portfolio"
-                        active={props.active} delay={2} click={() => props.linkClick(6)} />
-                </Half>
-                <Half>
-                    <ProjectLink id='04' title="Portal internetowy dla podróżników"
-                        active={props.active} delay={0} click={() => props.linkClick(6)} />
-                </Half>
-            </Row>
-        </div>
+    <Page active={props.active}>
+        <Row style={{ backgroundImage: `url(${props.image ? props.image : ''})`, backgroundSize: 'cover' }}>
+            {props.projects.map(({ index, title }) => {
+                return (
+                    <Half>
+                        <ProjectLink
+                            id={index}
+                            title={title}
+                            active={props.active}
+                            delay={index % 3}
+                            click={() => props.changeProject(index)}
+                        />
+                    </Half>
+                )
+            })}
+        </Row>
     </Page >
 );
 

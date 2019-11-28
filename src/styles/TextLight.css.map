@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAEA,AAAA,WAAW,CAAC;EACR,KAAK,ECAI,OAAkB;CDC9B",
+    "mappings": "AAEA,AAAA,WAAW,CAAC;EACR,KAAK,ECCI,OAAkB;CDA9B",
     "sources": [
         "TextLight.scss",
         "colors.scss"

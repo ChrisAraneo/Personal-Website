@@ -1,4 +1,5 @@
 @import './colors.scss';
+@import './variables.scss';
 
 .page {
     box-sizing: border-box;
@@ -7,7 +8,6 @@
     left: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     width: 100%;
     height: 100vh;
     color: white;
@@ -15,6 +15,18 @@
     overflow-y: auto;
     padding: 2rem;
     padding-top: 4rem;
+}
+
+@media only screen and (max-width: $breakpoint) {
+    .page.active {
+        justify-content: flex-start;
+    }
+}
+
+@media only screen and (min-width: $breakpoint + 1) {
+    .page.active {
+        justify-content: center;
+    }
 }
 
 .page.active {

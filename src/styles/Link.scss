@@ -1,0 +1,23 @@
+@import './colors.scss';
+
+.link {
+    font-family: 'Titillium Web';
+    box-sizing: border-box;
+    display: inline;
+    background-color: transparent;
+    line-height: 4rem;
+    color:darken(white, 25%);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 0;
+    user-select: none;
+    transition-duration: .3s;
+    text-decoration: none;
+}
+  
+.link:hover {
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
+}
