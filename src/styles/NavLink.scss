@@ -1,18 +1,36 @@
 @import '../styles/colors.scss';
+@import '../styles/variables.scss';
 
 .nav-link {
     font-family: 'Titillium Web';
     box-sizing: border-box;
-    background-color: $dark;
     line-height: 4rem;
     color: white;
     text-transform: uppercase;
     text-align: center;
-    font-size: 1.25rem;
-    padding: 0 2rem;
-    min-width: 12.5%;
     user-select: none;
     transition-duration: .3s;
+}
+
+@media only screen and (max-width: $navigation-breakpoint) {
+    .nav-link {
+        padding: 0;
+        font-size: 3.7vw;
+        width: 25%;
+        border-bottom: 1px solid rgba(255,255,255,.4);
+    }
+    .nav-link:not(:last-of-type) {
+        border-right: 1px solid rgba(255,255,255,.4);
+    }
+}
+
+@media only screen and (min-width: $navigation-breakpoint + 1) {
+    .nav-link {
+        font-size: 1.5rem;
+        padding: 0 2rem;
+        min-width: 12.5%;
+        border: none;
+    }
 }
 
 .nav-link:not(.active):hover {
@@ -23,3 +41,5 @@
 .nav-link.active {
     color: lighten($primary, 20%);
 }
+
+
