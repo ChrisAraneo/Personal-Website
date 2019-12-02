@@ -54,7 +54,7 @@ class Spider extends React.Component {
         const delay = (this.props.delay ? String(this.props.delay) : '0')
         return (
             <div className={`spider-container ${show ? `spider-in-${delay}` : `spider-out-${delay}`}`}
-                style={{ backgroundImage: `url(${this.props.image ? this.props.image : ''})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+                style={{ backgroundImage: `url(${this.props.image.path ? this.props.image.path : ''})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
                 <pre id="spider" className="spider">
                     {'//  \\\\'}<br />
                     {'_\\\\()//_'}<br />

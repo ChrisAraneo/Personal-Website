@@ -9,4 +9,18 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+
+@media only screen and (max-width: 1200px) {
+  .row {
+    max-width: 750px;
+    margin: auto auto;
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  .row {
+    max-width: 100%;
+    margin: inherit;
+  }
+}
 /*# sourceMappingURL=Row.css.map */

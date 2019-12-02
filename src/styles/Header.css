@@ -10,7 +10,6 @@
 .h1 {
   position: relative;
   font-size: 4rem;
-  line-height: 5rem;
   color: white;
   -webkit-transform: translateY(7rem);
           transform: translateY(7rem);

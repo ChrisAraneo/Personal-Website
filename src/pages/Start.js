@@ -11,7 +11,7 @@ const Start = (props) => (
         <Row>
             <Half style={{ justifyContent: 'center' }}>
                 <header>
-                    <Header active={props.active} style={{ textAlign: 'right' }}>Krzysztof Pająk</Header>
+                    <Header active={props.active} style={{ textAlign: 'right', marginBottom: '0' }}>Krzysztof Pająk</Header>
                     <Subheader active={props.active} delay={1} style={{ textAlign: 'right' }}>Junior Web Developer</Subheader>
                 </header>
             </Half>
@@ -19,7 +19,7 @@ const Start = (props) => (
                 <Spider active={props.active} image={props.image} />
             </Half>
         </Row>
-    </Page >
+    </Page>
 );
 
 export default Start;

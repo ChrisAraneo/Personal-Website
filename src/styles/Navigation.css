@@ -1,4 +1,4 @@
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
   .navigation {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -24,7 +24,7 @@
   }
 }
 
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 751px) {
   .navigation {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
