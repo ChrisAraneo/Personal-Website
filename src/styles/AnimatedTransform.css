@@ -1,4 +1,4 @@
-.spider-container {
+.animated-transform-container {
   width: 400px;
   min-height: 400px;
   padding: 2rem;
@@ -23,14 +23,13 @@
   opacity: 0;
 }
 
-.spider {
+.animated-transform {
   position: relative;
   width: 100%;
   font-size: 4rem;
   font-weight: bold;
   color: white;
   text-align: center;
-  text-shadow: 2px 0px 1px black, -2px 0px 1px #00cdff, 0px 2px 1px black, 0px -2px 1px #00cdff, 0px 0px 5px black;
   -webkit-transition-duration: .1s;
           transition-duration: .1s;
   -webkit-user-select: none;
@@ -39,9 +38,9 @@
           user-select: none;
 }
 
-.spider-in-0 {
-  -webkit-animation-name: spider-in;
-          animation-name: spider-in;
+.animated-transform-in-0 {
+  -webkit-animation-name: animated-transform-in;
+          animation-name: animated-transform-in;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   -webkit-animation-delay: 1s;
@@ -50,7 +49,7 @@
           animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes spider-in {
+@-webkit-keyframes animated-transform-in {
   from {
     opacity: 0;
   }
@@ -59,7 +58,7 @@
   }
 }
 
-@keyframes spider-in {
+@keyframes animated-transform-in {
   from {
     opacity: 0;
   }
@@ -68,9 +67,9 @@
   }
 }
 
-.spider-out-0 {
-  -webkit-animation-name: spider-out;
-          animation-name: spider-out;
+.animated-transform-out-0 {
+  -webkit-animation-name: animated-transform-out;
+          animation-name: animated-transform-out;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   -webkit-animation-delay: 0s;
@@ -79,7 +78,7 @@
           animation-fill-mode: backwards;
 }
 
-@-webkit-keyframes spider-out {
+@-webkit-keyframes animated-transform-out {
   from {
     opacity: 1;
   }
@@ -88,7 +87,7 @@
   }
 }
 
-@keyframes spider-out {
+@keyframes animated-transform-out {
   from {
     opacity: 1;
   }
@@ -96,4 +95,4 @@
     opacity: 0;
   }
 }
-/*# sourceMappingURL=Spider.css.map */
+/*# sourceMappingURL=AnimatedTransform.css.map */

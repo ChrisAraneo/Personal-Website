@@ -17,7 +17,7 @@
 @media only screen and (max-width: 750px) {
   .nav-link {
     padding: 0;
-    font-size: 3.7vw;
+    font-size: 3.6vw;
     width: 25%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   }
@@ -28,7 +28,7 @@
 
 @media only screen and (min-width: 751px) {
   .nav-link {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     padding: 0 2rem;
     min-width: 12.5%;
     border: none;

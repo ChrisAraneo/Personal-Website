@@ -1,6 +1,6 @@
 @import './colors.scss';
 
-.spider-container {
+.animated-transform-container {
     width: 400px;
     min-height: 400px;
     padding: 2rem;
@@ -13,31 +13,25 @@
     opacity: 0;
 }
 
-.spider {
+.animated-transform {
     position: relative;
     width: 100%;
     font-size: 4rem;
     font-weight: bold;
     color: white;
     text-align: center;
-    text-shadow:
-    2px 0px 1px black,
-    -2px 0px 1px $primary,
-    0px 2px 1px black,
-    0px -2px 1px $primary,
-    0px 0px 5px black;
     transition-duration: .1s;
     user-select: none;
 }
 
-.spider-in-0 {
-    animation-name: spider-in;
+.animated-transform-in-0 {
+    animation-name: animated-transform-in;
     animation-duration: 1s;
     animation-delay: 1s;
     animation-fill-mode: forwards;
 }
 
-@keyframes spider-in {
+@keyframes animated-transform-in {
     from {
         opacity: 0;
     }
@@ -46,14 +40,14 @@
     }
 }
 
-.spider-out-0 {
-    animation-name: spider-out;
+.animated-transform-out-0 {
+    animation-name: animated-transform-out;
     animation-duration: 1s;
     animation-delay: 0s;
     animation-fill-mode: backwards;
 }
 
-@keyframes spider-out {
+@keyframes animated-transform-out {
     from {
         opacity: 1;
     }

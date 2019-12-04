@@ -11,21 +11,34 @@
 
 .h1 {
     position: relative;
-    font-size: 4rem;
     color: white;
-    transform: translateY(7rem);
-    margin-bottom: 2rem;
+    transform: translateY(14rem);
 }
 
-@media only screen and (max-width: $breakpoint) {
+@media only screen and (max-width: $navigation-breakpoint) {
     .h1 {
         text-align: center;
+        font-size: 10vw;
+        line-height: 10vw;
+        margin-bottom: 2rem;
+    }
+}
+
+@media only screen and (min-width: $navigation-breakpoint + 1) {
+    .h1 {
+        text-align: center;
+        font-size: 3rem;
+        line-height: 3.2rem;
+        margin-bottom: 2rem;
     }
 }
 
 @media only screen and (min-width: $breakpoint + 1) {
     .h1 {
         text-align: left;
+        font-size: 3rem;
+        line-height: 3.2rem;
+        margin-bottom: 2rem;
     }
 }
 

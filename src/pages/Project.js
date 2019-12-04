@@ -26,7 +26,7 @@ const Project = (props) => {
                             <Link active={false} click={() => props.goBack()} style={{ marginBottom: '', textAlign: 'left' }}>Powrót</Link>
                         </Row>
                         <Row style={{ margin: '3rem 0' }}>
-                            <Header active={props.active} delay={0} style={{ fontSize: '3rem', lineHeight: '3.5rem', margin: '0rem' }}>{props.title}</Header>
+                            <Header active={props.active} delay={0} style={{ margin: '0rem' }}>{props.title}</Header>
                         </Row>
                         <Row>
                             <Paragraph active={props.active} delay={1}>
@@ -55,15 +55,19 @@ const Project = (props) => {
                         }
                     </Row>
                 </Half>
-                <Half
-                    style={
-                        mobile ?
-                            {}
-                            :
-                            { backgroundImage: `url(${props.background.path ? props.background.path : ''})`, backgroundSize: 'cover' }
-                    }>
-                    <figure style={{ width: '100%', height: '100%', minHeight: '600px', backgroundImage: `url(${props.image.path ? props.image.path : ''})`, backgroundSize: 'cover' }} />
-                </Half>
+                {mobile ?
+                    null
+                    :
+                    <Half
+                        style={
+                            mobile ?
+                                {}
+                                :
+                                { backgroundImage: `url(${props.background.path ? props.background.path : ''})`, backgroundSize: 'cover' }
+                        }>
+                        <figure style={{ width: '100%', height: '100%', minHeight: '600px', backgroundImage: `url(${props.image.path ? props.image.path : ''})`, backgroundSize: '100% auto', backgroundPosition: 'left center', backgroundRepeat: 'no-repeat' }} />
+                    </Half>
+                }
             </Row>
         </Page >
     );

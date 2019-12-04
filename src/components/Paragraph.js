@@ -11,7 +11,7 @@ class Paragraph extends React.Component {
         const show = (this.props.active && !this.state.isActive);
         const delay = (this.props.delay ? String(this.props.delay) : '0')
         return (
-            <p className={`p ${show ? `p-in-${delay}` : `p-out-${delay}`}`}>{this.props.children}</p>
+            <p className={`p ${show ? `p-in-${delay}` : `p-out-${delay}`}`} {...this.props}>{this.props.children}</p>
         );
     }
 }

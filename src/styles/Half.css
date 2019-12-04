@@ -2,7 +2,7 @@
   .half {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    width: 100%;
+    width: 100vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -33,6 +33,18 @@
         -ms-flex-pack: start;
             justify-content: flex-start;
     padding: 2rem;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .mobile-border {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  }
+}
+
+@media only screen and (min-width: 751px) {
+  .mobile-border {
+    border-bottom: none;
   }
 }
 /*# sourceMappingURL=Half.css.map */

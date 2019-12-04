@@ -25,7 +25,7 @@ const Portfolio = (props) => {
             }>
                 {props.projects.map(({ index, title }) => {
                     return (
-                        <Half>
+                        <Half style={{ padding: 0 }} className={`${index < props.projects.length - 1 ? 'mobile-border' : ''}`}>
                             <ProjectLink
                                 key={index}
                                 id={index}

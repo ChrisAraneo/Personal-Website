@@ -9,22 +9,35 @@
 
 .h1 {
   position: relative;
-  font-size: 4rem;
   color: white;
-  -webkit-transform: translateY(7rem);
-          transform: translateY(7rem);
-  margin-bottom: 2rem;
+  -webkit-transform: translateY(14rem);
+          transform: translateY(14rem);
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 750px) {
   .h1 {
     text-align: center;
+    font-size: 10vw;
+    line-height: 10vw;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (min-width: 751px) {
+  .h1 {
+    text-align: center;
+    font-size: 3rem;
+    line-height: 3.2rem;
+    margin-bottom: 2rem;
   }
 }
 
 @media only screen and (min-width: 1201px) {
   .h1 {
     text-align: left;
+    font-size: 3rem;
+    line-height: 3.2rem;
+    margin-bottom: 2rem;
   }
 }
 

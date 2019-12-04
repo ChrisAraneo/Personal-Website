@@ -1,13 +1,34 @@
 .h2 {
   position: relative;
-  font-size: 2.5rem;
-  line-height: 2.5rem;
-  text-align: left;
-  -webkit-transition-duration: .4s;
-          transition-duration: .4s;
-  color: white;
-  -webkit-transform: translateY(-7rem);
-          transform: translateY(-7rem);
+  -webkit-transform: translateY(14rem);
+          transform: translateY(14rem);
+}
+
+@media only screen and (max-width: 750px) {
+  .h2 {
+    text-align: left;
+    font-size: 8vw;
+    line-height: 8.2vw;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (min-width: 751px) {
+  .h2 {
+    text-align: left;
+    font-size: 2rem;
+    line-height: 2.2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  .h2 {
+    text-align: left;
+    font-size: 2rem;
+    line-height: 2.2rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .h2-in-0 {
@@ -45,8 +66,8 @@
 
 @-webkit-keyframes h2-in {
   from {
-    -webkit-transform: translateY(-7rem);
-            transform: translateY(-7rem);
+    -webkit-transform: translateY(-14rem);
+            transform: translateY(-14rem);
   }
   to {
     -webkit-transform: translateY(0rem);
@@ -56,8 +77,8 @@
 
 @keyframes h2-in {
   from {
-    -webkit-transform: translateY(-7rem);
-            transform: translateY(-7rem);
+    -webkit-transform: translateY(-14rem);
+            transform: translateY(-14rem);
   }
   to {
     -webkit-transform: translateY(0rem);
@@ -104,8 +125,8 @@
             transform: translateY(0rem);
   }
   to {
-    -webkit-transform: translateY(-7rem);
-            transform: translateY(-7rem);
+    -webkit-transform: translateY(-14rem);
+            transform: translateY(-14rem);
   }
 }
 
@@ -115,8 +136,8 @@
             transform: translateY(0rem);
   }
   to {
-    -webkit-transform: translateY(-7rem);
-            transform: translateY(-7rem);
+    -webkit-transform: translateY(-14rem);
+            transform: translateY(-14rem);
   }
 }
 

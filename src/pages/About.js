@@ -19,19 +19,22 @@ const About = (props) => {
                     {}
             }>
             <Row>
-                <Half style={
-                    mobile ?
-                        {}
-                        :
-                        { backgroundImage: `url(${props.image.path ? props.image.path : ''})`, backgroundSize: 'cover' }
-                }>
+                <Half
+                    style={
+                        mobile ?
+                            {}
+                            :
+                            { backgroundImage: `url(${props.image.path ? props.image.path : ''})`, backgroundSize: 'cover' }
+                    }
+                    className='mobile-border'>
                     <Header active={props.active} delay={0}>O mnie</Header>
                     <article>
                         <Paragraph active={props.active} delay={0}>Mam na imię Krzysiek i jestem absolwentem inżynierskich studiów informatycznych. Aspiruję na zostanie Web Developerem. Moim celem jest tworzenie wydajnych aplikacji webowych i kreatywnych stron internetowych. Posiadam również doświadczenie w programowaniu aplikacji mobilnych na system Android. Do moich zainteresowań i hobby zawsze należało programowanie, muzyka elektroniczna, sporty wodne, podróże.</Paragraph>
                     </article>
                 </Half>
-                <Half>
-                    <div style={{ marginBottom: '2rem' }}>
+                <Half style={{ padding: 0 }}>
+                    <div style={{ padding: '2rem' }}
+                        className='mobile-border'>
                         <Header active={props.active} delay={1}>Umiejętności</Header>
                         <article>
                             <Paragraph active={props.active} delay={1}>
@@ -53,7 +56,11 @@ const About = (props) => {
                             </Paragraph>
                         </article>
                     </div>
-                    <div>
+                    <div style={
+                        mobile ?
+                            { padding: '2rem' }
+                            :
+                            { padding: '0 2rem 2rem 2rem' }}>
                         <Header active={props.active} delay={2}>Wykształcenie</Header>
                         <article>
                             <Paragraph active={props.active} delay={1}>

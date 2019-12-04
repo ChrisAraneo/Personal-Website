@@ -18,7 +18,7 @@ import Project from './pages/Project'
 /* IMAGES */
 import wobble from './images/wobble.png';
 import wobble2 from './images/wobble-2.png';
-import project1 from './images/placeholder.jpg';
+import project1 from './images/eurostall.png';
 
 WebFont.load({
     google: {
@@ -192,6 +192,7 @@ class App extends React.Component {
 
                             <Contact
                                 active={this.state.active === 3}
+                                image={this.images[0]}
                                 width={this.state.width}
                                 height={this.state.height}
                             />

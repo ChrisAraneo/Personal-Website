@@ -11,10 +11,9 @@ class Subheader extends React.Component {
         const show = (this.props.active && !this.state.isActive);
         const delay = (this.props.delay ? String(this.props.delay) : '0');
         return (
-            <header className='header'>
+            <header className={`header ${this.props.className ? ` ${this.props.className}` : ''}`}>
                 <h2 className={`h2 ${show ? `h2-in-${delay}` : `h2-out-${delay}`}`} style={{ ...this.props.style }}>{this.props.children}</h2>
             </header>
-
         );
     }
 }
