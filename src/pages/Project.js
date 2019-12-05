@@ -6,6 +6,7 @@ import Link from '../components/Link';
 import Header from '../components/Header';
 import Paragraph from '../components/Paragraph';
 import Badge from '../components/Badge';
+import Border from '../components/Border';
 
 const Project = (props) => {
     const mobile = (props.width <= 1200);
@@ -25,15 +26,22 @@ const Project = (props) => {
                         <Row>
                             <Link active={false} click={() => props.goBack()} style={{ marginBottom: '', textAlign: 'left' }}>Powrót</Link>
                         </Row>
-                        <Row style={{ margin: '3rem 0' }}>
+                        <Row style={{ marginTop: '2rem' }}>
                             <Header active={props.active} delay={0} style={{ margin: '0rem' }}>{props.title}</Header>
+
                         </Row>
+                        <div style={{ width: '100%', height: 'auto', margin: '2rem 0' }}>
+                            <Border active={props.active} delay={0} style={{ width: '60%', marginRight: '40%' }} />
+                        </div>
                         <Row>
                             <Paragraph active={props.active} delay={1}>
                                 {props.description}
                             </Paragraph>
                         </Row>
-                        <Row style={{ margin: '3rem 0' }}>
+                        <div style={{ width: '100%', height: 'auto', margin: '2rem 0' }}>
+                            <Border active={props.active} delay={0} style={{ marginLeft: '40%' }} />
+                        </div>
+                        <Row style={{ margin: '2rem 0' }}>
                             <Paragraph active={props.active} delay={2}>
                                 {props.technologies ? props.technologies.map((name) => (
                                     <Badge>{name}</Badge>)) : null}

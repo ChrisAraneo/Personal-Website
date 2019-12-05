@@ -1,23 +1,49 @@
 @import '../styles/colors.scss';
+@import '../styles/variables.scss';
 
 .project-link {
-    font-family: 'Titillium Web';
     box-sizing: border-box;
     background-color: transparent;
+    color: white;
     text-align: center;
     font-size: 1.25rem;
     padding: 3rem;
-    transition-duration: 0.5s;
-    height: 100%
+    height: 100%;
+
+    display: inline-block;
+    position: relative;
+    transform: perspective(1px) translateZ(0);
+    
+    transition-duration: .3s;
+    overflow: hidden;
+    cursor: pointer;
+
+    transform: scale(0.95);
 }
 
 .project-link:hover {
-    background-color: darken($primary, 30%);
-    cursor: pointer;
+    transform: scale(1.0);
 }
 
-.project-link.active {
-    color: lighten($primary, 20%);
+.project-link::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition-timing-function: ease-out;
+    transition-duration: .2s;
+    background-image: radial-gradient( circle 997px at 5.8% 11.8%,  darken($primary, 15%) 0%, darken($secondary, 15%) 90% );
+
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.project-link:hover::before {
+    opacity: 1;
+    transform: scale(1.0);
 }
 
 .project-link .header:last-of-type {
@@ -27,3 +53,4 @@
 .project-link .h2 {
     color: $secondary;
 }
+

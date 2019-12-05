@@ -1,22 +1,30 @@
 @import './colors.scss';
 
 .link {
-    font-family: 'Titillium Web';
     box-sizing: border-box;
-    display: inline;
+    display: inline-block;
     background-color: transparent;
-    color:darken(white, 25%);
+    color: darken(white, 10%);
     text-transform: uppercase;
     text-align: center;
     font-size: 1.25rem;
-    padding: 0;
+    padding: 2px 4px;
     user-select: none;
     transition-duration: .3s;
     text-decoration: none;
+
+    background:
+     linear-gradient(
+       to bottom, white 0%,
+       white 100%
+     );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 1px;
 }
   
 .link:hover {
-    text-decoration: underline;
-    color: white;
+    background-size: 4px 100%;
+    color: $dark;
     cursor: pointer;
 }

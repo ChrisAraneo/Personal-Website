@@ -4,12 +4,16 @@
 .nav-link {
     font-family: 'Titillium Web';
     box-sizing: border-box;
+    display: inline-block;
+    position: relative;
     line-height: 4rem;
     color: white;
     text-transform: uppercase;
     text-align: center;
     user-select: none;
     transition-duration: .3s;
+    overflow: hidden;
+    transform: translateY(0rem);
 }
 
 @media only screen and (max-width: $navigation-breakpoint) {
@@ -33,13 +37,45 @@
     }
 }
 
+.nav-link:not(.active)::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(-5rem);
+    transition-duration: .3s;
+    background-color: transparent;
+    transition-timing-function: ease-out;
+}
+
+.nav-link:not(.active):hover::before {
+    background-color: darken(white, 5%);
+    transform: translateY(0rem);
+}
+
 .nav-link:not(.active):hover {
-    background-color: darken($primary, 30%);
+    color: $dark;
     cursor: pointer;
 }
 
 .nav-link.active {
-    color: lighten($primary, 20%);
+    color: $primary;
 }
 
-
+.nav-link.active::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(0rem);
+    transition-duration: .3s;
+    background-color: transparent;
+    transition-timing-function: ease-out;
+    background-color: $dark;
+}

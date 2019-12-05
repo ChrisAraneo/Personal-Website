@@ -1,5 +1,12 @@
-$primary: #00cdff;
+$primary: #00d9ff;
+$primary-dark: darken($primary, 15%);
+
 $secondary: #00ffea;
-$dark: rgb(30,30,30);
+$secondary-dark: darken($secondary, 15%);
+
+// $dark: rgb(30,30,30);
+$dark: darken($primary,46%);
+
+
 $background: rgb(0,205,255);
 $text-light: rgb(150, 150, 150);

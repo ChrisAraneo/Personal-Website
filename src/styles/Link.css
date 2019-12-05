@@ -1,14 +1,13 @@
 .link {
-  font-family: 'Titillium Web';
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  display: inline;
+  display: inline-block;
   background-color: transparent;
-  color: #bfbfbf;
+  color: #e6e6e6;
   text-transform: uppercase;
   text-align: center;
   font-size: 1.25rem;
-  padding: 0;
+  padding: 2px 4px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -16,11 +15,16 @@
   -webkit-transition-duration: .3s;
           transition-duration: .3s;
   text-decoration: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(white));
+  background: linear-gradient(to bottom, white 0%, white 100%);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 1px;
 }
 
 .link:hover {
-  text-decoration: underline;
-  color: white;
+  background-size: 4px 100%;
+  color: #1e1e1e;
   cursor: pointer;
 }
 /*# sourceMappingURL=Link.css.map */

@@ -54,7 +54,6 @@ class Contact extends React.Component {
                         </Header>
                         <article>
                             <Paragraph active={props.active} delay={1} style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
-
                                 <div id="email-panel" style={{ marginBottom: '2rem' }}>
                                     <Subheader active={props.active} delay={1} style={{ textAlign: 'right', margin: 0 }} className="color-secondary">E-mail</Subheader>
                                     <Link href="mailto:chris.araneo@gmail.com" target="_blank" style={{ textTransform: 'inherit', fontSize: '1.75rem', float: 'right' }}> chris.araneo@gmail.com</Link>

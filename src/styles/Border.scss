@@ -1,0 +1,81 @@
+@import '../styles/colors.scss';
+@import '../styles/variables.scss';
+
+$border-height: 2px;
+
+.border-wrapper {
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 100%;
+    min-height: $border-height;
+    margin: 0;
+}
+
+.border {
+    box-sizing: border-box;
+    width: 100%;
+    height: $border-height;
+    background-image: linear-gradient(90deg,  $primary 20%, $secondary 100%);
+    transform: scale(0);
+}
+
+.border-in-0 {
+    animation-name: border-in;
+    animation-duration: .5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+.border-in-1 {
+    animation-name: border-in;
+    animation-duration: .5s;
+    animation-delay: 1.2s;
+    animation-fill-mode: forwards;
+}
+.border-in-2 {
+    animation-name: border-in;
+    animation-duration: .5s;
+    animation-delay: 1.4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes border-in {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.border-out-0 {
+    animation-name: border-out;
+    animation-duration: .5s;
+    animation-delay: 0s;
+    animation-fill-mode: backwards;
+}
+.border-out-1 {
+    animation-name: border-out;
+    animation-duration: .5s;
+    animation-delay: 0.2s;
+    animation-fill-mode: backwards;
+}
+.border-out-2 {
+    animation-name: border-out;
+    animation-duration: .5;
+    animation-delay: 0.4s;
+    animation-fill-mode: backwards;
+}
+
+
+@keyframes border-out {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
