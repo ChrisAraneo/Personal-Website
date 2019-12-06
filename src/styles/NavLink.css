@@ -64,7 +64,7 @@
 }
 
 .nav-link:not(.active):hover {
-  color: #00161a;
+  color: #000d0f;
   cursor: pointer;
 }
 
@@ -87,6 +87,6 @@
   background-color: transparent;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  background-color: #00161a;
+  background-color: #000d0f;
 }
 /*# sourceMappingURL=NavLink.css.map */

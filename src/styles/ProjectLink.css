@@ -54,5 +54,7 @@
 
 .project-link .h2 {
   color: #00ffea;
+  margin: 0;
+  margin-bottom: 1rem;
 }
 /*# sourceMappingURL=ProjectLink.css.map */

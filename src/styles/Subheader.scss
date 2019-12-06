@@ -4,33 +4,11 @@
 .h2 {
     position: relative;
     transform: translateY(14rem);
-}
 
-@media only screen and (max-width: $navigation-breakpoint) {
-    .h2 {
-        text-align: left;
-        font-size: 8vw;
-        line-height: 8.2vw;
-        margin-bottom: 2rem;
-    }
-}
-
-@media only screen and (min-width: $navigation-breakpoint + 1) {
-    .h2 {
-        text-align: left;
-        font-size: 2rem;
-        line-height: 2.2rem;
-        margin-bottom: 2rem;
-    }
-}
-
-@media only screen and (min-width: $breakpoint + 1) {
-    .h2 {
-        text-align: left;
-        font-size: 2rem;
-        line-height: 2.2rem;
-        margin-bottom: 2rem;
-    }
+    text-align: left;
+    font-size: 2rem;
+    line-height: 2.2rem;
+    margin-bottom: 2rem;
 }
 
 .h2-in-0 {

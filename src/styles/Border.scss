@@ -19,63 +19,125 @@ $border-height: 2px;
     transform: scale(0);
 }
 
-.border-in-0 {
-    animation-name: border-in;
+// BORDER FROM *LEFT* TO RIGHT ANIMATION
+.border-left-in-0 {
+    animation-name: border-left-in;
     animation-duration: .5s;
     animation-delay: 1s;
     animation-fill-mode: forwards;
 }
-.border-in-1 {
-    animation-name: border-in;
+.border-left-in-1 {
+    animation-name: border-left-in;
     animation-duration: .5s;
     animation-delay: 1.2s;
     animation-fill-mode: forwards;
 }
-.border-in-2 {
-    animation-name: border-in;
+.border-left-in-2 {
+    animation-name: border-left-in;
     animation-duration: .5s;
     animation-delay: 1.4s;
     animation-fill-mode: forwards;
 }
 
-@keyframes border-in {
+@keyframes border-left-in {
     from {
-        transform: translateX(-100%);
+        transform: scale(0) translateX(-100%);
         opacity: 0;
     }
     to {
-        transform: translateX(0);
+        transform: scale(1) translateX(0);
         opacity: 1;
     }
 }
 
-.border-out-0 {
-    animation-name: border-out;
+.border-left-out-0 {
+    animation-name: border-left-out;
     animation-duration: .5s;
     animation-delay: 0s;
     animation-fill-mode: backwards;
 }
-.border-out-1 {
-    animation-name: border-out;
+.border-left-out-1 {
+    animation-name: border-left-out;
     animation-duration: .5s;
     animation-delay: 0.2s;
     animation-fill-mode: backwards;
 }
-.border-out-2 {
-    animation-name: border-out;
+.border-left-out-2 {
+    animation-name: border-left-out;
     animation-duration: .5;
     animation-delay: 0.4s;
     animation-fill-mode: backwards;
 }
 
 
-@keyframes border-out {
+@keyframes border-left-out {
     from {
-        transform: translateX(0);
+        transform: scale(1) translateX(0);
         opacity: 1;
     }
     to {
-        transform: translateX(-100%);
+        transform: scale(0) translateX(-100%);
+        opacity: 0;
+    }
+}
+
+// BORDER FROM CENTER
+.border-center-in-0 {
+    animation-name: border-center-in;
+    animation-duration: .5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+.border-center-in-1 {
+    animation-name: border-center-in;
+    animation-duration: .5s;
+    animation-delay: 1.2s;
+    animation-fill-mode: forwards;
+}
+.border-center-in-2 {
+    animation-name: border-center-in;
+    animation-duration: .5s;
+    animation-delay: 1.4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes border-center-in {
+    from {
+        transform: scale(0) translateX(50%);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) translateX(0);
+        opacity: 1;
+    }
+}
+
+.border-center-out-0 {
+    animation-name: border-center-out;
+    animation-duration: .5s;
+    animation-delay: 0s;
+    animation-fill-mode: backwards;
+}
+.border-center-out-1 {
+    animation-name: border-center-out;
+    animation-duration: .5s;
+    animation-delay: 0.2s;
+    animation-fill-mode: backwards;
+}
+.border-center-out-2 {
+    animation-name: border-center-out;
+    animation-duration: .5;
+    animation-delay: 0.4s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes border-center-out {
+    from {
+        transform: scale(1) translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0) translateX(50%);
         opacity: 0;
     }
 }

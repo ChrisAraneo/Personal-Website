@@ -6,7 +6,7 @@ import Link from '../components/Link';
 import Header from '../components/Header';
 import Paragraph from '../components/Paragraph';
 import Badge from '../components/Badge';
-import Border from '../components/Border';
+import BorderLeft from '../components/BorderLeft';
 
 const Project = (props) => {
     const mobile = (props.width <= 1200);
@@ -30,17 +30,12 @@ const Project = (props) => {
                             <Header active={props.active} delay={0} style={{ margin: '0rem' }}>{props.title}</Header>
 
                         </Row>
-                        <div style={{ width: '100%', height: 'auto', margin: '2rem 0' }}>
-                            <Border active={props.active} delay={0} style={{ width: '60%', marginRight: '40%' }} />
-                        </div>
+                        <BorderLeft active={props.active} delay={0} style={{ margin: '2rem 0' }} />
                         <Row>
                             <Paragraph active={props.active} delay={1}>
                                 {props.description}
                             </Paragraph>
                         </Row>
-                        <div style={{ width: '100%', height: 'auto', margin: '2rem 0' }}>
-                            <Border active={props.active} delay={0} style={{ marginLeft: '40%' }} />
-                        </div>
                         <Row style={{ margin: '2rem 0' }}>
                             <Paragraph active={props.active} delay={2}>
                                 {props.technologies ? props.technologies.map((name) => (
@@ -73,7 +68,7 @@ const Project = (props) => {
                                 :
                                 { backgroundImage: `url(${props.background.path ? props.background.path : ''})`, backgroundSize: 'cover' }
                         }>
-                        <figure style={{ width: '100%', height: '100%', minHeight: '600px', backgroundImage: `url(${props.image.path ? props.image.path : ''})`, backgroundSize: '100% auto', backgroundPosition: 'left center', backgroundRepeat: 'no-repeat' }} />
+                        <figure style={{ width: '100%', height: '100%', minHeight: '600px', backgroundImage: `url(${props.image.path ? props.image.path : ''})`, backgroundSize: 'auto 100%', backgroundPosition: 'center center', backgroundRepeat: 'no-repeat' }} />
                     </Half>
                 }
             </Row>

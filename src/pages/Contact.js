@@ -54,44 +54,63 @@ class Contact extends React.Component {
                         </Header>
                         <article>
                             <Paragraph active={props.active} delay={1} style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
-                                <div id="email-panel" style={{ marginBottom: '2rem' }}>
-                                    <Subheader active={props.active} delay={1} style={{ textAlign: 'right', margin: 0 }} className="color-secondary">E-mail</Subheader>
-                                    <Link href="mailto:chris.araneo@gmail.com" target="_blank" style={{ textTransform: 'inherit', fontSize: '1.75rem', float: 'right' }}> chris.araneo@gmail.com</Link>
+                                <div id="email-panel" style={{ display: 'flex', flexDirection: 'row', justifyContent: `${mobile ? 'center' : 'flex-start'}`, marginBottom: '1rem' }}>
+                                    <Subheader
+                                        active={props.active}
+                                        delay={props.delay}
+                                        style={{ fontSize: '1.75rem', padding: '2px 0', margin: `${mobile ? '0' : '0 2.5rem 0 0'}` }}>
+                                        Email
+                                    </Subheader>
+                                    <Subheader
+                                        active={props.active}
+                                        delay={props.delay}
+                                        style={{ fontSize: '1.6rem', lineHeight: '2.2rem', margin: '0', color: 'rgba(255,255,255,.75)', fontWeight: 'normal', textAlign: 'center' }}>
+                                        <Link href="mailto:chris.araneo@gmail.com" target="_blank" style={{ textTransform: 'inherit', fontSize: '1.75rem', float: 'right' }}> chris.araneo@gmail.com</Link>
+                                    </Subheader>
                                 </div>
-                                <div id="github-panel">
-                                    <Subheader active={props.active} delay={2} style={{ textAlign: 'right', margin: 0 }} className="color-secondary">Git</Subheader>
-                                    <Link href="https://github.com/ChrisAraneo/" target="_blank" style={{ textTransform: 'inherit', fontSize: '1.75rem', float: 'right' }}>github.com/ChrisAraneo</Link>
+                                <div id="github-panel" style={{ display: 'flex', flexDirection: 'row', justifyContent: `${mobile ? 'center' : 'flex-start'}` }}>
+                                    <Subheader
+                                        active={props.active}
+                                        delay={props.delay}
+                                        style={{ fontSize: '1.75rem', padding: '2px 0', margin: `${mobile ? '0' : '0 2.5rem 0 0'}`, textAlign: 'right' }}>
+                                        Git
+                                    </Subheader>
+                                    <Subheader
+                                        active={props.active}
+                                        delay={props.delay}
+                                        style={{ fontSize: '1.6rem', lineHeight: '2.2rem', margin: '0', color: 'rgba(255,255,255,.75)', fontWeight: 'normal', textAlign: 'center' }}>
+                                        <Link href="mailto:chris.araneo@gmail.com" target="_blank" style={{ textTransform: 'inherit', fontSize: '1.75rem', float: 'right' }}>github.com/ChrisAraneo</Link>
+                                    </Subheader>
                                 </div>
                             </Paragraph>
                         </article>
                     </Half>
-                    <Half>
-                        <AnimatedTransform id='at' active={props.active} image={props.image} style={{ fontSize: '10rem' }}>
-                            {this.state.hovered ? null :
-                                <h1 className="h1" style={{ textAlign: 'center', transform: 'translateY(0)', margin: 0, padding: 0 }}>Kontakt</h1>
-                                // <span style={{ fontSize: '3rem', lineHeight: '3rem', textTransform: 'uppercase', display: 'inline-block' }}>
-                                //     <span>Krzysztof </span>
-                                //     <br />
-                                //     <span style={{ display: 'block', textAlign: 'right' }}>Pająk</span>
-                                // </span>
-                            }
-
-                            <div style={{ fontSize: '4rem', lineHeight: '4rem' }}>
-                                {this.state.hovered ?
-                                    (this.state.hovered === 'email' ?
-                                        (<FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '12rem' }} />)
-                                        :
-                                        (this.state.hovered === 'github' ?
-                                            (<FontAwesomeIcon icon={faCodeBranch} style={{ fontSize: '12rem' }} />)
-                                            :
-                                            '')
-                                    )
-                                    :
-                                    ''
+                    {mobile ?
+                        null
+                        :
+                        <Half>
+                            <AnimatedTransform id='at' active={props.active} image={props.image} style={{ fontSize: '10rem' }}>
+                                {this.state.hovered ? null :
+                                    <h1 className="h1" style={{ textAlign: 'center', transform: 'translateY(0)', margin: 0, padding: 0 }}>Kontakt</h1>
                                 }
-                            </div>
-                        </AnimatedTransform>
-                    </Half>
+
+                                <div style={{ fontSize: '4rem', lineHeight: '4rem' }}>
+                                    {this.state.hovered ?
+                                        (this.state.hovered === 'email' ?
+                                            (<FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '12rem' }} />)
+                                            :
+                                            (this.state.hovered === 'github' ?
+                                                (<FontAwesomeIcon icon={faCodeBranch} style={{ fontSize: '12rem' }} />)
+                                                :
+                                                '')
+                                        )
+                                        :
+                                        ''
+                                    }
+                                </div>
+                            </AnimatedTransform>
+                        </Half>
+                    }
                 </Row>
             </Page >
         );

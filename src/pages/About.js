@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import TextLight from '../components/TextLight';
 import Paragraph from '../components/Paragraph';
 import Badge from '../components/Badge';
+import BorderLeft from '../components/BorderLeft';
 import Border from '../components/Border';
 
 const About = (props) => {
@@ -29,9 +30,12 @@ const About = (props) => {
                     }
                     className='mobile-border'>
                     <Header active={props.active} delay={0}>O mnie</Header>
-                    <div style={{ width: '40%', height: 'auto', marginBottom: '2rem' }}>
-                        <Border active={props.active} delay={0} />
-                    </div>
+                    {
+                        mobile ?
+                            <Border active={props.active} delay={0} style={{ marginBottom: '2rem' }} />
+                            :
+                            <BorderLeft active={props.active} delay={0} style={{ marginBottom: '2rem' }} />
+                    }
                     <article>
                         <Paragraph active={props.active} delay={0}>Mam na imię Krzysiek i jestem absolwentem inżynierskich studiów informatycznych. Aspiruję na zostanie Web Developerem. Moim celem jest tworzenie wydajnych aplikacji webowych i kreatywnych stron internetowych. Posiadam również doświadczenie w programowaniu aplikacji mobilnych na system Android. Do moich zainteresowań i hobby zawsze należało programowanie, muzyka elektroniczna, sporty wodne, podróże.</Paragraph>
                     </article>
@@ -40,9 +44,12 @@ const About = (props) => {
                     <div style={{ padding: '2rem' }}
                         className='mobile-border'>
                         <Header active={props.active} delay={1}>Umiejętności</Header>
-                        <div style={{ width: '40%', height: 'auto', marginBottom: '2rem' }}>
-                            <Border active={props.active} delay={1} />
-                        </div>
+                        {
+                            mobile ?
+                                <Border active={props.active} delay={1} style={{ marginBottom: '2rem' }} />
+                                :
+                                <BorderLeft active={props.active} delay={1} style={{ marginBottom: '2rem' }} />
+                        }
                         <article>
                             <Paragraph active={props.active} delay={1}>
                                 <Badge>JavaScript ES6</Badge>
@@ -69,9 +76,12 @@ const About = (props) => {
                             :
                             { padding: '0 2rem 2rem 2rem' }}>
                         <Header active={props.active} delay={2}>Wykształcenie</Header>
-                        <div style={{ width: '40%', height: 'auto', marginBottom: '2rem' }}>
-                            <Border active={props.active} delay={2} />
-                        </div>
+                        {
+                            mobile ?
+                                <Border active={props.active} delay={2} style={{ marginBottom: '2rem' }} />
+                                :
+                                <BorderLeft active={props.active} delay={2} style={{ marginBottom: '2rem' }} />
+                        }
                         <article>
                             <Paragraph active={props.active} delay={1}>
                                 <TextLight>2019 - obecnie</TextLight>

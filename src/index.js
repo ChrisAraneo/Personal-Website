@@ -19,6 +19,9 @@ import Project from './pages/Project'
 import wobble from './images/wobble.png';
 import wobble2 from './images/wobble-2.png';
 import project1 from './images/eurostall.png';
+import project2 from './images/note-detect.png';
+import project3 from './images/wobble.png'; // TO DO
+import project4 from './images/podroze.png';
 
 WebFont.load({
     google: {
@@ -77,12 +80,25 @@ class App extends React.Component {
             path: project1,
             object: null
         },
+        {
+            path: project2,
+            object: null
+        },
+        {
+            path: project3,
+            object: null
+        },
+        {
+            path: project4,
+            object: null
+        },
     ]
 
     projects = [
         {
             index: 0,
             title: 'Strona internetowa firmy',
+            short: 'Statyczna strona internetowa',
             description: 'Responsywna strona internetowa firmy oferującej projektowanie i realizację konstrukcji stalowych. Wykonana w 2018 roku w ramach praktyk studenckich. Zaktualizowana w 2019 roku. Jednym z wyzwań było napisanie arkuszy stylów oraz skryptów samodzielnie, bez użycia dodatkowych bibliotek.',
             technologies: ['HTML 5', 'CSS 3', 'JavaScript'],
             image: this.images[2]
@@ -90,23 +106,26 @@ class App extends React.Component {
         {
             index: 1,
             title: 'Aplikacja mobilna do detekcji wysokości nut',
+            short: 'Aplikacja mobilna Android',
             description: 'Aplikacja mobilna na system Android z zaimplementowanymi algorytmami przetwarzania sygnałów, które są wykorzystane do określenia wysokości nut nagranego dźwięku. Zrealizowana w ramach pracy inżynierskiej.',
             technologies: ['Java', 'Android SDK', 'Git'],
-            image: this.images[2]
+            image: this.images[3]
         },
         {
             index: 2,
             title: 'Moje portfolio',
+            short: 'Strona wykorzystująca React',
             description: '(W TRAKCIE BUDOWY) Strona na której aktualnie się znajdujesz. Znajduje się tutaj spis najistotniejszych projektów.',
             technologies: ['React', 'JavaScript', 'CSS 3 + SASS', 'HTML 5'],
-            image: this.images[2]
+            image: this.images[4]
         },
         {
             index: 3,
-            title: 'System CMS dla stron o tematyce podróżniczej',
+            title: 'Portal internetowy o tematyce podróżniczej',
+            short: 'Strona z prostym CMS',
             description: '(W TRAKCIE BUDOWY) Prosty system zarządzania treścią dla stron o tematyce podróżniczej zrealizowany dla wrocławskiego Klubu Miłośników Podróży. Warstwa backend została wykonana przy użyciu języka PHP, dane zapisywane są w bazie MySQL, warstwa frontend wykorzystuje bibliotekę React. Strony internetowe oparte o ten system dają możliwość dodawania prelekcji, dodawania zdjęć z podróży, zaznaczania odwiedzonego kraju na globusie 3D.',
             technologies: ['PHP', 'MySQL', 'React', 'JavaScript', 'CSS 3 + SASS', 'HTML 5'],
-            image: project1
+            image: this.images[5]
         }
     ]
 
@@ -192,7 +211,7 @@ class App extends React.Component {
 
                             <Contact
                                 active={this.state.active === 3}
-                                image={this.images[0]}
+                                image={this.images[1]}
                                 width={this.state.width}
                                 height={this.state.height}
                             />
@@ -204,7 +223,7 @@ class App extends React.Component {
                                     description={description}
                                     technologies={technologies}
                                     background={this.images[1]}
-                                    image={this.images[2]}
+                                    image={image}
                                     goBack={() => this.onNavigate(2)}
                                     goPrev={index > 0 ? () => this.onNavigate(3 + index) : null}
                                     goNext={index < this.projects.length - 1 ? () => this.onNavigate(5 + index) : null}

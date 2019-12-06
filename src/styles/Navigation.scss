@@ -14,13 +14,13 @@
         justify-content: center;
         width: 100%;
         height: 4rem;
-        background-color: $dark;
+        background-color: $dark; 
     }
 }
 
 @media only screen and (min-width: $navigation-breakpoint + 1) {
     .navigation {
-        box-sizing: border-box;
+        box-sizing: border-box; 
         position: absolute;
         top: 0;
         left: 0;
