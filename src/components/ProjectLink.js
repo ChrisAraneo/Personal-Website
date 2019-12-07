@@ -9,11 +9,11 @@ const ProjectLink = (props) => {
     const mobile = (props.width <= 1200);
     return (
         <div className={`project-link ${props.active ? 'active' : ''}`} style={{ ...props.style }} onClick={() => props.click()}>
-            <div style={{ display: 'flex', flexDirection: `${mobile ? 'column' : 'row'}`, justifyContent: `${mobile ? 'center' : 'flex-start'}`, marginBottom: `${mobile ? '1rem' : '0'}` }}>
+            <div style={{ display: 'flex', flexDirection: `${mobile ? 'column' : 'row'}`, justifyContent: `${mobile ? 'center' : 'flex-start'}` }}>
                 <Subheader
                     active={props.active}
                     delay={props.delay}
-                    style={{ margin: `${mobile ? '0' : '0 1.5rem 0 0'}`, textAlign: 'center' }}>
+                    style={{ margin: `${mobile ? '0' : '0 1rem 0 0'}`, textAlign: 'left' }}>
                     {mobile ? 'Projekt ' : ''}
                     {
                         String(props.id + 1).length < 2 ? '0' + (props.id + 1) : String(props.id + 1)
@@ -22,21 +22,16 @@ const ProjectLink = (props) => {
                 <Subheader
                     active={props.active}
                     delay={props.delay}
-                    style={{ fontSize: '1.6rem', lineHeight: '2.2rem', margin: '0', color: 'rgba(255,255,255,.75)', fontWeight: 'normal', textAlign: 'center' }}>
+                    style={{ fontSize: '1.6rem', lineHeight: '2.2rem', margin: '0', color: 'rgba(255,255,255,.75)', fontWeight: 'normal', textAlign: 'left' }}>
                     {props.short}
                 </Subheader>
             </div>
-            {
-                mobile ?
-                    null
-                    :
-                    <BorderLeft active={props.active} delay={props.delay} style={{ margin: '1.5rem 0' }} />
-            }
+            <BorderLeft active={props.active} delay={props.delay} style={{ margin: '1.5rem 0' }} />
             <Header
                 active={props.active
                 }
                 delay={props.delay}
-                style={{ margin: '0 0 1rem 0' }}>
+                style={{ margin: 0, textAlign: 'left' }}>
                 {props.title}
             </Header>
         </div>

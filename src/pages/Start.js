@@ -13,7 +13,7 @@ const Start = (props) => {
             active={props.active}
             style={
                 mobile ?
-                    { backgroundImage: `url(${props.image.path ? props.image.path : ''})`, backgroundSize: 'cover' }
+                    { backgroundImage: `url(${props.background.path ? props.background.path : ''})`, backgroundSize: 'cover' }
                     :
                     {}
             }>
@@ -24,7 +24,7 @@ const Start = (props) => {
                         <Subheader active={props.active} delay={1} style={{ textAlign: `${mobile ? 'center' : 'right'}`, marginBottom: 0 }}>{`\{WEBSITE IN CONSTRUCTION\}`}</Subheader>
                     </header>
                 </Half>
-                {props.width <= 1200 ?
+                {mobile ?
                     null
                     :
                     <Half>

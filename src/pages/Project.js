@@ -6,6 +6,7 @@ import Link from '../components/Link';
 import Header from '../components/Header';
 import Paragraph from '../components/Paragraph';
 import Badge from '../components/Badge';
+import Border from '../components/Border';
 import BorderLeft from '../components/BorderLeft';
 
 const Project = (props) => {
@@ -26,11 +27,14 @@ const Project = (props) => {
                         <Row>
                             <Link active={false} click={() => props.goBack()} style={{ marginBottom: '', textAlign: 'left' }}>Powrót</Link>
                         </Row>
-                        <Row style={{ marginTop: '2rem' }}>
-                            <Header active={props.active} delay={0} style={{ margin: '0rem' }}>{props.title}</Header>
-
+                        <Row style={{ width: '100%', marginTop: '2rem', display: 'block' }}>
+                            <Header active={props.active} delay={0} style={{ margin: '0 auto', textAlign: `${mobile ? 'center' : 'left'}` }}>{props.title}</Header>
                         </Row>
-                        <BorderLeft active={props.active} delay={0} style={{ margin: '2rem 0' }} />
+                        {mobile ?
+                            <Border active={props.active} delay={0} style={{ margin: '2rem auto' }} />
+                            :
+                            <BorderLeft active={props.active} delay={0} style={{ margin: '2rem 0' }} />
+                        }
                         <Row>
                             <Paragraph active={props.active} delay={1}>
                                 {props.description}

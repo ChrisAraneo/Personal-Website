@@ -189,6 +189,7 @@ class App extends React.Component {
                             <Start
                                 active={this.state.active === 0}
                                 image={this.images[0]}
+                                background={this.images[1]}
                                 width={this.state.width}
                                 height={this.state.height}
                             />
