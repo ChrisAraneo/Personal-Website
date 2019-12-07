@@ -13,7 +13,7 @@ const Portfolio = (props) => {
             active={props.active}
             style={
                 mobile ?
-                    { backgroundImage: `url(${props.image.path ? props.image.path : ''})`, backgroundSize: 'cover' }
+                    { backgroundImage: `url(${props.image ? props.image : ''})`, backgroundSize: 'cover' }
                     :
                     {}
             }>
@@ -21,11 +21,11 @@ const Portfolio = (props) => {
                 mobile ?
                     {}
                     :
-                    { backgroundImage: `url(${props.image.path ? props.image.path : ''})`, backgroundSize: 'cover' }
+                    { backgroundImage: `url(${props.image ? props.image : ''})`, backgroundSize: 'cover' }
             }>
                 {props.projects.map(({ index, title, short }) => {
                     return (
-                        <Half style={{ padding: 0 }} className={`${index < props.projects.length - 1 ? 'mobile-border' : ''}`}>
+                        <Half key={index} style={{ padding: 0 }} className={`${index < props.projects.length - 1 ? 'mobile-border' : ''}`}>
                             <ProjectLink
                                 key={index}
                                 id={index}

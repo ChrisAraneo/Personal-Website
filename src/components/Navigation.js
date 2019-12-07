@@ -9,7 +9,7 @@ const Navigation = (props) => (
             props.routes.map(({ index, name, click, hidden }) => {
                 if (!hidden) {
                     return (
-                        <NavLink key={index} active={props.active == index ? true : false} click={click}>{name}</NavLink>
+                        <NavLink key={index} active={props.active === index ? true : false} click={click}>{name}</NavLink>
                     );
                 } else {
                     return null;

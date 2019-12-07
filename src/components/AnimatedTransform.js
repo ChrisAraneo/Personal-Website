@@ -54,7 +54,7 @@ class AnimatedTransform extends React.Component {
         const delay = (this.props.delay ? String(this.props.delay) : '0')
         return (
             <div className={`animated-transform-container ${show ? `animated-transform-in-${delay}` : `animated-transform-out-${delay}`}`}
-                style={{ backgroundImage: `url(${this.props.image.path ? this.props.image.path : ''})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+                style={{ backgroundImage: `url(${this.props.image ? this.props.image : ''})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
                 <div id={String(this.props.id)} className="animated-transform" style={{ ...this.props.style }}>
                     {this.props.children}
                 </div>

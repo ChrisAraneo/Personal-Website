@@ -21,7 +21,7 @@ const Start = (props) => {
                 <Half style={{ justifyContent: 'center' }}>
                     <header>
                         <Header active={props.active} style={{ textAlign: `${mobile ? 'center' : 'right'}`, marginBottom: '1rem' }}>Krzysztof Pająk</Header>
-                        <Subheader active={props.active} delay={1} style={{ textAlign: `${mobile ? 'center' : 'right'}`, marginBottom: 0 }}>{`\{WEBSITE IN CONSTRUCTION\}`}</Subheader>
+                        <Subheader active={props.active} delay={1} style={{ textAlign: `${mobile ? 'center' : 'right'}`, marginBottom: 0 }}>{`\{WEBSITE UNDER CONSTRUCTION\}`}</Subheader>
                     </header>
                 </Half>
                 {mobile ?

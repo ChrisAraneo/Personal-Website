@@ -43,7 +43,7 @@ class Contact extends React.Component {
                 active={props.active}
                 style={
                     mobile ?
-                        { backgroundImage: `url(${props.image.path ? props.image.path : ''})`, backgroundSize: 'cover' }
+                        { backgroundImage: `url(${props.image ? props.image : ''})`, backgroundSize: 'cover' }
                         :
                         {}
                 }>
@@ -52,48 +52,46 @@ class Contact extends React.Component {
                         <Header active={props.active} delay={0} style={{ textAlign: `${mobile ? 'center' : 'right'}` }}>
                             Krzysztof Pająk
                         </Header>
-                        <article>
-                            <Paragraph active={props.active} delay={1} style={{ display: 'flex', flexDirection: 'column', alignItems: `${mobile ? 'center' : 'flex-end'}` }}>
-                                <div id="email-panel" style={{ display: 'flex', flexDirection: 'row', justifyContent: `${mobile ? 'center' : 'flex-start'}`, marginBottom: '1rem' }}>
-                                    {
-                                        mobile ?
-                                            null
-                                            :
-                                            <Subheader
-                                                active={props.active}
-                                                delay={props.delay}
-                                                style={{ fontSize: '1.75rem', padding: '2px 0', margin: `${mobile ? '0' : '0 2.5rem 0 0'}` }}>
-                                                Email
-                                    </Subheader>
-                                    }
-
-                                    <Subheader
-                                        active={props.active}
-                                        delay={props.delay}
-                                        style={{ fontSize: '1.6rem', lineHeight: '2.2rem', margin: '0', color: 'rgba(255,255,255,.75)', fontWeight: 'normal', textAlign: 'center' }}>
-                                        <Link href="mailto:chris.araneo@gmail.com" target="_blank" style={{ textTransform: 'inherit', fontSize: '1.75rem', float: 'right' }}> chris.araneo@gmail.com</Link>
-                                    </Subheader>
-                                </div>
-                                <div id="github-panel" style={{ display: 'flex', flexDirection: 'row', justifyContent: `${mobile ? 'center' : 'flex-start'}` }}>
-                                    {mobile ?
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: `${mobile ? 'center' : 'flex-end'}` }}>
+                            <span id="email-panel" style={{ display: 'flex', flexDirection: 'row', justifyContent: `${mobile ? 'center' : 'flex-start'}`, marginBottom: '1rem' }}>
+                                {
+                                    mobile ?
                                         null
                                         :
                                         <Subheader
                                             active={props.active}
                                             delay={props.delay}
-                                            style={{ fontSize: '1.75rem', padding: '2px 0', margin: `${mobile ? '0' : '0 2.5rem 0 0'}`, textAlign: 'right' }}>
-                                            Git
+                                            style={{ fontSize: '1.75rem', padding: '2px 0', margin: `${mobile ? '0' : '0 2.5rem 0 0'}` }}>
+                                            Email
                                     </Subheader>
-                                    }
+                                }
+
+                                <Subheader
+                                    active={props.active}
+                                    delay={props.delay}
+                                    style={{ fontSize: '1.6rem', lineHeight: '2.2rem', margin: '0', color: 'rgba(255,255,255,.75)', fontWeight: 'normal', textAlign: 'center' }}>
+                                    <Link href="mailto:chris.araneo@gmail.com" target="_blank" style={{ textTransform: 'inherit', fontSize: '1.75rem', float: 'right' }}> chris.araneo@gmail.com</Link>
+                                </Subheader>
+                            </span>
+                            <span id="github-panel" style={{ display: 'flex', flexDirection: 'row', justifyContent: `${mobile ? 'center' : 'flex-start'}` }}>
+                                {mobile ?
+                                    null
+                                    :
                                     <Subheader
                                         active={props.active}
                                         delay={props.delay}
-                                        style={{ fontSize: '1.6rem', lineHeight: '2.2rem', margin: '0', color: 'rgba(255,255,255,.75)', fontWeight: 'normal', textAlign: 'center' }}>
-                                        <Link href="mailto:chris.araneo@gmail.com" target="_blank" style={{ textTransform: 'inherit', fontSize: '1.75rem', float: 'right' }}>github.com/ChrisAraneo</Link>
+                                        style={{ fontSize: '1.75rem', padding: '2px 0', margin: `${mobile ? '0' : '0 2.5rem 0 0'}`, textAlign: 'right' }}>
+                                        Git
                                     </Subheader>
-                                </div>
-                            </Paragraph>
-                        </article>
+                                }
+                                <Subheader
+                                    active={props.active}
+                                    delay={props.delay}
+                                    style={{ fontSize: '1.6rem', lineHeight: '2.2rem', margin: '0', color: 'rgba(255,255,255,.75)', fontWeight: 'normal', textAlign: 'center' }}>
+                                    <Link href="mailto:chris.araneo@gmail.com" target="_blank" style={{ textTransform: 'inherit', fontSize: '1.75rem', float: 'right' }}>github.com/ChrisAraneo</Link>
+                                </Subheader>
+                            </span>
+                        </div>
                     </Half>
                     {
                         mobile ?

@@ -16,7 +16,7 @@ const About = (props) => {
             active={props.active}
             style={
                 mobile ?
-                    { backgroundImage: `url(${props.image.path ? props.image.path : ''})`, backgroundSize: 'cover' }
+                    { backgroundImage: `url(${props.image ? props.image : ''})`, backgroundSize: 'cover' }
                     :
                     {}
             }>
@@ -26,7 +26,7 @@ const About = (props) => {
                         mobile ?
                             {}
                             :
-                            { backgroundImage: `url(${props.image.path ? props.image.path : ''})`, backgroundSize: 'cover' }
+                            { backgroundImage: `url(${props.image ? props.image : ''})`, backgroundSize: 'cover' }
                     }
                     className='mobile-border'>
                     <Header active={props.active} delay={0}>O mnie</Header>

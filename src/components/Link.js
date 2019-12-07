@@ -4,7 +4,7 @@ import '../styles/Link.css'
 const Link = (props) => {
     if (props.click) {
         return (<a href={`${props.href ? props.href : '#'}`} className={`link ${props.active ? 'active' : ''}`} style={{ ...props.style }}
-            onClick={() => props.click()} {...props}>
+            onClick={() => { props.click() }} {...props}>
             {props.children}
         </a>);
     } else {
